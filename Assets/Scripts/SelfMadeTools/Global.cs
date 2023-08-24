@@ -21,7 +21,6 @@ public static class Global {
         }
         Debug.Log("ERROR: Could not Find Component");
         return returnVal;
-        
     }
     public static Vector3 GetMouseWorldPosition() {
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
