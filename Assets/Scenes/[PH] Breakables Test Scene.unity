@@ -467,7 +467,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 99656e6dce009ce45b05124e880f58dd, type: 2}
+  m_Material: {fileID: 6200000, guid: 8a830b348a896854f9a05f5c7217d5a3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -588,13 +588,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1208759725}
-  breakableMaterial: {fileID: 11400000, guid: 24358da3323cb8e44bd5ad57a3024259, type: 2}
+  breakableMaterial: {fileID: 11400000, guid: 40218dbc34fe051469e2cc6f8dccfcd0, type: 2}
   autoSetPhysicsMaterial: 1
   autoGenerateMass: 1
   mass: 3.3304546
   autoGenerateBreakCoefficient: 1
-  breakCoefficient: 9.991364
-  currentBreakHealth: 9.991364
+  breakCoefficient: 33.304546
+  currentBreakHealth: 33.304546
   isInvincible: 1
   OnBreakEvent:
     m_PersistentCalls:
@@ -682,7 +682,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 99656e6dce009ce45b05124e880f58dd, type: 2}
+  m_Material: {fileID: 6200000, guid: 8a830b348a896854f9a05f5c7217d5a3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -803,13 +803,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1531110415}
-  breakableMaterial: {fileID: 11400000, guid: 24358da3323cb8e44bd5ad57a3024259, type: 2}
+  breakableMaterial: {fileID: 11400000, guid: 40218dbc34fe051469e2cc6f8dccfcd0, type: 2}
   autoSetPhysicsMaterial: 1
   autoGenerateMass: 1
   mass: 2.167471
   autoGenerateBreakCoefficient: 1
-  breakCoefficient: 6.502413
-  currentBreakHealth: 6.502413
+  breakCoefficient: 21.67471
+  currentBreakHealth: 21.67471
   isInvincible: 1
   OnBreakEvent:
     m_PersistentCalls:
@@ -839,7 +839,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1380653391332507080, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
       propertyPath: mass
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1380653391332507080, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
       propertyPath: autoGenerateMass
@@ -847,11 +847,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1380653391332507080, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
       propertyPath: breakCoefficient
-      value: 3
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1380653391332507080, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
+      propertyPath: breakableMaterial
+      value: 
+      objectReference: {fileID: 11400000, guid: 1efb7840c7ff4b24298825c31742d2ae, type: 2}
+    - target: {fileID: 1380653391332507080, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
       propertyPath: currentBreakHealth
-      value: 3
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1380653391332507080, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
       propertyPath: autoSetPhysicsMaterial
@@ -863,12 +867,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3409387975728696545, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3409387975728696545, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 6200000, guid: 99656e6dce009ce45b05124e880f58dd, type: 2}
+      objectReference: {fileID: 6200000, guid: f094bb4902b047f49a7d7f21f192c2b8, type: 2}
     - target: {fileID: 5016844804197343937, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.49

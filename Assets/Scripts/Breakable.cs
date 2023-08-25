@@ -26,12 +26,10 @@ public class Breakable : MonoBehaviour
 
     [Space(10)]
     [SerializeField] private bool autoGenerateMass = true;
-    [DisableIf("autoGenerateMass")]
     public float mass = 1f;
 
     [Space(10)]
     [SerializeField] private bool autoGenerateBreakCoefficient = true;
-    [DisableIf("autoGenerateBreakCoefficient")]
     public float breakCoefficient = 50f;
     public float currentBreakHealth = 50f;
 
@@ -80,6 +78,7 @@ public class Breakable : MonoBehaviour
         if (autoGenerateMass)
         {
             CalculateMass();
+            SetMass();
         }
 
         if (autoGenerateBreakCoefficient)
