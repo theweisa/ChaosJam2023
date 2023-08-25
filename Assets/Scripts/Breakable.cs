@@ -5,6 +5,7 @@ using UnityEngine.Events;
 using NaughtyAttributes;
 
 [ExecuteInEditMode]
+[RequireComponent(typeof(Rigidbody2D))]
 public class Breakable : MonoBehaviour
 {
     //base class for all physics breakables
@@ -40,6 +41,12 @@ public class Breakable : MonoBehaviour
     {
 
 #if UNITY_EDITOR
+
+        if (!rb)
+        {
+            rb = GetComponent<Rigidbody2D>();
+        }
+
         if (autoGenerateMass)
         {
             CalculateMass();
@@ -84,6 +91,11 @@ public class Breakable : MonoBehaviour
 
     private void OnValidate()
     {
+        if (!rb)
+        {
+            rb = GetComponent<Rigidbody2D>();
+        }
+
         if (autoGenerateMass)
         {
             CalculateMass();
