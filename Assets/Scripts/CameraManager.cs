@@ -2,17 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraManager : MonoBehaviour
+public class CameraManager : UnitySingleton<CameraManager>
 {
-    // Start is called before the first frame update
-    void Start()
+    public CameraState currentCameraState = CameraState.StageView;
+
+    private void UpdateCameraFromState()
     {
-        
+        switch (currentCameraState)
+        {
+            case CameraState.ThrowView:
+                break;
+            case CameraState.CollisionView:
+                break;
+            case CameraState.StageView:
+                break;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetCameraState(CameraState newState)
     {
-        
+        currentCameraState = newState;
+        UpdateCameraFromState();
     }
 }
