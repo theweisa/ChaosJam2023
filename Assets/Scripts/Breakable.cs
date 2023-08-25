@@ -18,33 +18,41 @@ public class Breakable : MonoBehaviour
 
     [Header("Stats")]
     [Space(1)]
-
     [Expandable]
     public BreakableMaterial breakableMaterial;
+
+    [Space(10)]
+    [SerializeField] private bool autoSetPhysicsMaterial = true;
+
+    [Space(10)]
     [SerializeField] private bool autoGenerateMass = true;
     [DisableIf("autoGenerateMass")]
     public float mass = 1f;
 
+    [Space(10)]
     [SerializeField] private bool autoGenerateBreakCoefficient = true;
     [DisableIf("autoGenerateBreakCoefficient")]
     public float breakCoefficient = 50f;
     public float currentBreakHealth = 50f;
+
+    [Space(10)]
     public bool isInvincible = true;
 
-    [Space(4)]
-
+    [Space(8)]
     [Header("Misc")]
     [Space(1)]
     public UnityEvent OnBreakEvent;
 
     private void Start()
     {
-        if (Application.isPlaying)
+        if (!Application.isPlaying)
         {
-            currentBreakHealth = breakCoefficient;
-            StartCoroutine(StartRoutine());
+            return;
         }
-        
+
+        currentBreakHealth = breakCoefficient;
+        StartCoroutine(StartRoutine());
+
     }
 
     IEnumerator StartRoutine()
@@ -79,6 +87,12 @@ public class Breakable : MonoBehaviour
             CalculateBreakForce();
         }
 
+        if (autoSetPhysicsMaterial)
+        {
+            SetMaterial();
+        }
+
+        SetMass();
         return;
 #endif
         #endregion
@@ -91,14 +105,13 @@ public class Breakable : MonoBehaviour
     void CalculateMass()
     {
         rb.useAutoMass = true;
-        mass = rb.mass * breakableMaterial.massCoefficient;
+        mass = rb.mass * (breakableMaterial != null ? breakableMaterial.massCoefficient : 1);
         rb.useAutoMass = false;
-        SetMass();
     }
 
     void CalculateBreakForce()
     {
-        breakCoefficient = mass * breakableMaterial.breakCoefficient;
+        breakCoefficient = mass * (breakableMaterial != null ? breakableMaterial.breakCoefficient : 1);
         currentBreakHealth = breakCoefficient;
     }
 
@@ -110,35 +123,13 @@ public class Breakable : MonoBehaviour
         }
     }
 
-
-    #region Editor
-
-    #if UNITY_EDITOR
-
-    private void OnValidate()
+    void SetMaterial()
     {
-        if (Application.isPlaying)
+        if(rb && breakableMaterial && breakableMaterial.physicsMaterial)
         {
-            return;
-        }
-
-        if (!rb)
-        {
-            rb = GetComponent<Rigidbody2D>();
-        }
-
-        if (autoGenerateMass)
-        {
-            CalculateMass();
-        }
-
-        if (autoGenerateBreakCoefficient)
-        {
-            CalculateBreakForce();
+            rb.sharedMaterial = breakableMaterial.physicsMaterial;
         }
     }
-    #endif
-    #endregion
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -467,7 +467,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 99656e6dce009ce45b05124e880f58dd, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -589,6 +589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1208759725}
   breakableMaterial: {fileID: 11400000, guid: 24358da3323cb8e44bd5ad57a3024259, type: 2}
+  autoSetPhysicsMaterial: 1
   autoGenerateMass: 1
   mass: 3.3304546
   autoGenerateBreakCoefficient: 1
@@ -681,7 +682,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 99656e6dce009ce45b05124e880f58dd, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -803,6 +804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1531110415}
   breakableMaterial: {fileID: 11400000, guid: 24358da3323cb8e44bd5ad57a3024259, type: 2}
+  autoSetPhysicsMaterial: 1
   autoGenerateMass: 1
   mass: 2.167471
   autoGenerateBreakCoefficient: 1
@@ -835,13 +837,45 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1380653391332507080, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
+      propertyPath: mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380653391332507080, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
+      propertyPath: autoGenerateMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380653391332507080, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
+      propertyPath: breakCoefficient
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380653391332507080, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
+      propertyPath: currentBreakHealth
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380653391332507080, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
+      propertyPath: autoSetPhysicsMaterial
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380653391332507080, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
+      propertyPath: autoGenerateBreakCoefficient
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409387975728696545, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409387975728696545, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 99656e6dce009ce45b05124e880f58dd, type: 2}
     - target: {fileID: 5016844804197343937, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.581
+      value: -0.49
       objectReference: {fileID: 0}
     - target: {fileID: 5016844804197343937, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.602
+      value: -3.55
       objectReference: {fileID: 0}
     - target: {fileID: 5016844804197343937, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
       propertyPath: m_LocalPosition.z
