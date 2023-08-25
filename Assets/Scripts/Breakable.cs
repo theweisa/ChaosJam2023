@@ -48,6 +48,24 @@ public class Breakable : MonoBehaviour
             return;
         }
 
+        if (autoGenerateMass)
+        {
+            CalculateMass();
+            SetMass();
+        }
+
+        if (autoGenerateBreakCoefficient)
+        {
+            CalculateBreakForce();
+        }
+
+        if (autoSetPhysicsMaterial)
+        {
+            SetMaterial();
+        }
+
+        SetMass();
+
         currentBreakHealth = breakCoefficient;
         StartCoroutine(StartRoutine());
 
