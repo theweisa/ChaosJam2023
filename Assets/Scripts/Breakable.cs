@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using NaughtyAttributes;
 
 [ExecuteInEditMode]
@@ -26,6 +27,13 @@ public class Breakable : MonoBehaviour
     [SerializeField] private bool autoGenerateBreakCoefficient = true;
     [DisableIf("autoGenerateBreakCoefficient")]
     public float breakCoefficient = 50f;
+
+    [Space(4)]
+
+    [Header("Misc")]
+    [Space(1)]
+    public UnityEvent OnBreakEvent;
+
 
     // Update is called once per frame
     void Update()
@@ -97,6 +105,7 @@ public class Breakable : MonoBehaviour
         if(impulse >= breakCoefficient)
         {
             Debug.Log("I broke!");
+            OnBreakEvent.Invoke();
             Destroy(gameObject);
         }
 
