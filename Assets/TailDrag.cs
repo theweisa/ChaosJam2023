@@ -5,6 +5,14 @@ using UnityEngine;
 public class TailDrag : MonoBehaviour
 {
     Vector3 mousePositionOffset;
+    public SpringJoint2D spring;
+    public LineRenderer lr;
+
+    private void Update()
+    {
+        lr.SetPosition(0, transform.position);
+        lr.SetPosition(1, spring.connectedBody.position);
+    }
 
     private Vector3 GetMouseWorldPosition()
     {
