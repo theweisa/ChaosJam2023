@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joint: {fileID: 1160155587}
+  rat: {fileID: 1160155582}
   lr: {fileID: 1137110228}
 --- !u!212 &1137110224
 SpriteRenderer:
@@ -650,6 +651,7 @@ MonoBehaviour:
   rb: {fileID: 1160155585}
   maxAngularVelocity: 50
   velocityClamp: 80
+  ignoreClamp: 0
 --- !u!231 &1160155587
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -733,7 +735,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 9.351261
+  orthographic size: 27.365417
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

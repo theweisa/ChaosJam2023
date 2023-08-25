@@ -7,13 +7,14 @@ public class TailDrag : MonoBehaviour
 {
     Vector3 mousePositionOffset;
     public SpringJoint2D joint;
+    public GameObject rat;
     public LineRenderer lr;
     private bool isHeld;
 
     private void FixedUpdate()
     {
         lr.SetPosition(0, this.transform.position);
-        lr.SetPosition(1, joint.gameObject.transform.position);
+        lr.SetPosition(1, rat.transform.position);
     }
 
     private Vector3 GetMouseWorldPosition()
@@ -37,6 +38,8 @@ public class TailDrag : MonoBehaviour
         if (isHeld)
         {
             this.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            rat.GetComponent<RatClamp>().ignoreClamp = true;
+            this.GetComponent<Rigidbody2D>().mass = 0f; 
         }
     }
 }
