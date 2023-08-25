@@ -1,1 +1,1 @@
-public enum CameraState {ThrowView, CollisionView, StageView }
+public enum CameraState {ThrowView, CollisionView, StageView } 
