@@ -28,6 +28,7 @@ public class Breakable : MonoBehaviour
     [SerializeField] private bool autoGenerateBreakCoefficient = true;
     [DisableIf("autoGenerateBreakCoefficient")]
     public float breakCoefficient = 50f;
+    public float currentBreakHealth = 50f;
 
     [Space(4)]
 
@@ -35,12 +36,21 @@ public class Breakable : MonoBehaviour
     [Space(1)]
     public UnityEvent OnBreakEvent;
 
+    private void Start()
+    {
+        currentBreakHealth = breakCoefficient;
+    }
 
     // Update is called once per frame
     void Update()
     {
 
 #if UNITY_EDITOR
+
+        if (Application.isPlaying)
+        {
+            return;
+        }
 
         if (!rb)
         {
@@ -74,6 +84,7 @@ public class Breakable : MonoBehaviour
     void CalculateBreakForce()
     {
         breakCoefficient = mass * breakableMaterial.breakCoefficient;
+        currentBreakHealth = breakCoefficient;
     }
 
     void SetMass()
@@ -91,6 +102,11 @@ public class Breakable : MonoBehaviour
 
     private void OnValidate()
     {
+        if (Application.isPlaying)
+        {
+            return;
+        }
+
         if (!rb)
         {
             rb = GetComponent<Rigidbody2D>();
@@ -114,7 +130,9 @@ public class Breakable : MonoBehaviour
         float impulse = collision.contacts[0].normalImpulse;
         Debug.Log("felt a collision with impulse: " + impulse);
 
-        if(impulse >= breakCoefficient)
+        currentBreakHealth -= impulse;
+
+        if(currentBreakHealth <= 0)
         {
             Debug.Log("I broke!");
             OnBreakEvent.Invoke();
