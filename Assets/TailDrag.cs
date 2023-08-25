@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TailDrag : MonoBehaviour
 {
     Vector3 mousePositionOffset;
-    public SpringJoint2D spring;
+    public SpringJoint2D joint;
     public LineRenderer lr;
+    private bool isHeld;
 
-    private void Update()
+    private void FixedUpdate()
     {
-        lr.SetPosition(0, transform.position);
-        lr.SetPosition(1, spring.connectedBody.position);
+        lr.SetPosition(0, this.transform.position);
+        lr.SetPosition(1, joint.gameObject.transform.position);
     }
 
     private Vector3 GetMouseWorldPosition()
@@ -22,10 +24,19 @@ public class TailDrag : MonoBehaviour
     private void OnMouseDown()
     {
         mousePositionOffset = gameObject.transform.position - GetMouseWorldPosition();
+        isHeld = true;
     }
 
     private void OnMouseDrag()
     {
         transform.position = GetMouseWorldPosition() + mousePositionOffset;
+    }
+
+    private void OnMouseUp()
+    {
+        if (isHeld)
+        {
+            this.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        }
     }
 }
