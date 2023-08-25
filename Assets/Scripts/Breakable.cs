@@ -1,22 +1,108 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using NaughtyAttributes;
 
+[ExecuteInEditMode]
 public class Breakable : MonoBehaviour
 {
     //base class for all physics breakables
 
+    [Header("Refs")]
+    [Space(1)]
+    public Rigidbody2D rb;
 
+    [Space(4)]
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("Stats")]
+    [Space(1)]
+
+    [Expandable]
+    public BreakableMaterial breakableMaterial;
+    [SerializeField] private bool autoGenerateMass = true;
+    [DisableIf("autoGenerateMass")]
+    public float mass = 1f;
+
+    [SerializeField] private bool autoGenerateBreakCoefficient = true;
+    [DisableIf("autoGenerateBreakCoefficient")]
+    public float breakCoefficient = 50f;
 
     // Update is called once per frame
     void Update()
     {
-        
+
+#if UNITY_EDITOR
+        if (autoGenerateMass)
+        {
+            CalculateMass();
+        }
+
+        if (autoGenerateBreakCoefficient)
+        {
+            CalculateBreakForce();
+        }
+
+        return;
+#endif
+
+
     }
+
+    void CalculateMass()
+    {
+        rb.useAutoMass = true;
+        mass = rb.mass * breakableMaterial.massCoefficient;
+        rb.useAutoMass = false;
+        SetMass();
+    }
+
+    void CalculateBreakForce()
+    {
+        breakCoefficient = mass * breakableMaterial.breakCoefficient;
+    }
+
+    void SetMass()
+    {
+        if (rb && !rb.useAutoMass)
+        {
+            rb.mass = mass;
+        }
+    }
+
+
+    #region Editor
+
+    #if UNITY_EDITOR
+
+    private void OnValidate()
+    {
+        if (autoGenerateMass)
+        {
+            CalculateMass();
+        }
+
+        if (autoGenerateBreakCoefficient)
+        {
+            CalculateBreakForce();
+        }
+    }
+    #endif
+    #endregion
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        float impulse = collision.contacts[0].normalImpulse;
+        Debug.Log("felt a collision with impulse: " + impulse);
+
+        if(impulse >= breakCoefficient)
+        {
+            Debug.Log("I broke!");
+            Destroy(gameObject);
+        }
+
+
+
+    }
+
+
 }

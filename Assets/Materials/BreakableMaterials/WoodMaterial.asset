@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14662eaa5a48a0a41af4f0f946af0eab, type: 3}
+  m_Name: WoodMaterial
+  m_EditorClassIdentifier: 
+  id: wood
+  massCoefficient: 1
+  breakCoefficient: 5
+  physicsMaterial: {fileID: 6200000, guid: 99656e6dce009ce45b05124e880f58dd, type: 2}
