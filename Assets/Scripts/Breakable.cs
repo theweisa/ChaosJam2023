@@ -29,6 +29,7 @@ public class Breakable : MonoBehaviour
     [DisableIf("autoGenerateBreakCoefficient")]
     public float breakCoefficient = 50f;
     public float currentBreakHealth = 50f;
+    public bool isInvincible = true;
 
     [Space(4)]
 
@@ -38,13 +39,24 @@ public class Breakable : MonoBehaviour
 
     private void Start()
     {
-        currentBreakHealth = breakCoefficient;
+        if (Application.isPlaying)
+        {
+            currentBreakHealth = breakCoefficient;
+            StartCoroutine(StartRoutine());
+        }
+        
+    }
+
+    IEnumerator StartRoutine()
+    {
+        yield return new WaitForSeconds(0.3f);
+        isInvincible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        #region EditorUpdate
 #if UNITY_EDITOR
 
         if (Application.isPlaying)
@@ -69,9 +81,12 @@ public class Breakable : MonoBehaviour
 
         return;
 #endif
+        #endregion
 
 
     }
+
+
 
     void CalculateMass()
     {
@@ -128,7 +143,18 @@ public class Breakable : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         float impulse = collision.contacts[0].normalImpulse;
+
+        if(Mathf.Approximately(impulse, 0))
+        {
+            return;
+        }
+
         Debug.Log("felt a collision with impulse: " + impulse);
+
+        if (isInvincible)
+        {
+            return;
+        }
 
         currentBreakHealth -= impulse;
 

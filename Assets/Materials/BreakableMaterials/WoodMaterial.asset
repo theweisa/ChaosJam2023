@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: wood
   massCoefficient: 1
-  breakCoefficient: 5
+  breakCoefficient: 3
   physicsMaterial: {fileID: 6200000, guid: 99656e6dce009ce45b05124e880f58dd, type: 2}
