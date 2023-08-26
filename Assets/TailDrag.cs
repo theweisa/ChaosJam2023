@@ -22,23 +22,25 @@ public class TailDrag : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (GameManager.Instance.gameState != GameManager.GameState.Throwing) return;
+        if (GameManager.Instance.gameState != GameManager.GameState.Throwing || PlayerManager.Instance.isHeld) return;
+        Debug.Log("pickup!");
         mousePositionOffset = gameObject.transform.position - Global.GetMouseWorldPosition();
         PlayerManager.Instance.isHeld = true;
     }
 
     private void OnMouseDrag()
     {
+        if (!PlayerManager.Instance.isHeld) return;
         transform.position = Global.GetMouseWorldPosition() + mousePositionOffset;
     }
 
     private void OnMouseUp()
     {
-        if (PlayerManager.Instance.isHeld)
-        {
-            tailRb.bodyType = RigidbodyType2D.Dynamic;
-            tailRb.mass = 0f;
-            StartCoroutine(PlayerManager.Instance.ThrowRat());
-        }
+        if (!PlayerManager.Instance.isHeld) return;
+
+        tailRb.bodyType = RigidbodyType2D.Dynamic;
+        tailRb.mass = 0f;
+        tailRb.angularDrag = 5f;
+        StartCoroutine(PlayerManager.Instance.ThrowRat());
     }
 }

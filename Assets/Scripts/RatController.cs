@@ -20,7 +20,7 @@ public class RatController : MonoBehaviour
             isAttached = true;
             joint.enabled = true;
             gameObject.layer = 7;
-            joint.connectedBody = PlayerManager.Instance.GetComponent<Rigidbody2D>();
+            joint.connectedBody = PlayerManager.Instance.tail.GetComponent<Rigidbody2D>();
             GetComponent<Collider2D>().layerOverridePriority = 1;
             GetComponent<Collider2D>().excludeLayers = LayerMask.GetMask("AttachedRat");
         }

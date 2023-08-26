@@ -6,6 +6,7 @@ public class GameManager : UnitySingleton<GameManager>
 {
     public enum GameState { Start, Throwing, Thrown, LevelEntered, Win}
     public GameState gameState = GameState.Start;
+    
     public TriggerEnterBox levelWalls;
     /*
         logic:
@@ -26,7 +27,7 @@ public class GameManager : UnitySingleton<GameManager>
 
     public IEnumerator StartLevel(LevelManager level) {
         gameState = GameState.Start;
-        levelWalls.SetLeftWallEnable(false);
+        yield return PlayerManager.Instance.ResetRat(true);
         // claw machine comes down with mouse
         // pan to the scene
         CameraManager.Instance.PanToCamera(CameraManager.Instance.initialCollisionCamera);
@@ -42,7 +43,7 @@ public class GameManager : UnitySingleton<GameManager>
         if (gameState != GameState.Throwing) return;
         Debug.Log("entered!");
         gameState = GameState.LevelEntered;
-        levelWalls.SetLeftWallEnable(true);
+        levelWalls.SetWallEnable(TriggerEnterBox.WallType.Left, true);
     }
 
     public void InitThrowing() {
