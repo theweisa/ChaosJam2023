@@ -6,7 +6,7 @@ public class RatClamp : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float maxAngularVelocity;
-    public float velocityClamp;
+    public float unclampedVelocityModifier;
     public bool ignoreClamp = false;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +22,13 @@ public class RatClamp : MonoBehaviour
             rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxAngularVelocity);
             if(rb.angularVelocity > maxAngularVelocity ) {
                 rb.angularVelocity = maxAngularVelocity;
+            }
+        }
+        else if (ignoreClamp && rb)
+        {
+            rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxAngularVelocity * unclampedVelocityModifier);
+            if(rb.angularVelocity > maxAngularVelocity ) {
+                rb.angularVelocity = maxAngularVelocity * unclampedVelocityModifier;
             }
         }
     }
