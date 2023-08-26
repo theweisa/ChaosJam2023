@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2261574668589179973
+--- !u!1001 &1006034176462558720
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 1380653391332507080, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
       propertyPath: breakableMaterial
       value: 
-      objectReference: {fileID: 11400000, guid: 40218dbc34fe051469e2cc6f8dccfcd0, type: 2}
+      objectReference: {fileID: 11400000, guid: 1efb7840c7ff4b24298825c31742d2ae, type: 2}
     - target: {fileID: 5016844804197343937, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -52,21 +52,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8800171987915275299, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
-      propertyPath: m_Color.b
-      value: 0.89753234
+    - target: {fileID: 5552347720984048834, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552347720984048834, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552347720984048834, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552347720984048834, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.74
       objectReference: {fileID: 0}
     - target: {fileID: 8800171987915275299, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
-      propertyPath: m_Color.g
-      value: 0.9622642
-      objectReference: {fileID: 0}
-    - target: {fileID: 8800171987915275299, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
-      propertyPath: m_Color.r
-      value: 0.43120328
-      objectReference: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b321a26c609534c468df407d6606c13d, type: 3}
     - target: {fileID: 8892073931402464770, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
       propertyPath: m_Name
-      value: GlassBreakable
+      value: ScrapSquare
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
