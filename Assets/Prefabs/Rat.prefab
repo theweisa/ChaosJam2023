@@ -105,7 +105,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
   m_Mass: 1.1864433
-  m_LinearDrag: 0.3
+  m_LinearDrag: 0.12
   m_AngularDrag: 0.7
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -204,6 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joint: {fileID: 8485101731949089392}
+  preVelocity: {x: 0, y: 0, z: 0}
   isMaster: 0
   isAttached: 0
   tailTriggered: 0

@@ -51,7 +51,7 @@ public class RatController : MonoBehaviour
     public void AttachRat(RatController rat, ContactPoint2D contactPoint)
     {
         rat.transform.parent = transform;
-        
+        rat.GetComponent<Rigidbody2D>().sharedMaterial = PlayerManager.Instance.ratMaterial;
 
         /*
         FixedJoint2D newJoint = gameObject.AddComponent<FixedJoint2D>();
