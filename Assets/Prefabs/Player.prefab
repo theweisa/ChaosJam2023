@@ -101,8 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d95a08b1a01b0d843839ed9a8a34ffad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tailRb: {fileID: 0}
   joint: {fileID: 3687760921250050914}
-  rat: {fileID: 7636506634786418518}
   lr: {fileID: 4909507163530076989}
 --- !u!58 &4046908635976381740
 CircleCollider2D:
@@ -573,6 +573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4478578452230265797}
+  - component: {fileID: 8530110175575329189}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -597,3 +598,19 @@ Transform:
   - {fileID: 9088661877844702039}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8530110175575329189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8333541321165470473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef5c6e438b6b5c499767ccc0388ef69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentRat: {fileID: 7636506634786418518}
+  tail: {fileID: 6843291879990859612}
+  isHeld: 0
+  stopVelocity: 0.2

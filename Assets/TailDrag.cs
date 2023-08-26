@@ -3,27 +3,28 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class TailDrag : UnitySingleton<TailDrag>
+public class TailDrag : MonoBehaviour
 {
     Vector3 mousePositionOffset;
+    public Rigidbody2D tailRb;
     public SpringJoint2D joint;
-    public GameObject rat;
     public LineRenderer lr;
-    private bool isHeld;
+
+    void Awake() {
+        tailRb = tailRb != null ? tailRb : Global.FindComponent<Rigidbody2D>(gameObject);
+    }
 
     private void FixedUpdate()
     {
-        //lr.SetPosition(0, (Vector3)joint.connectedAnchor);
-        //lr.SetPosition(1, (Vector3)joint.anchor);
         lr.SetPosition(0, this.transform.position);
-        lr.SetPosition(1, rat.transform.position);
+        lr.SetPosition(1, PlayerManager.Instance.currentRat.transform.position);
     }
 
     private void OnMouseDown()
     {
+        if (GameManager.Instance.gameState != GameManager.GameState.Throwing) return;
         mousePositionOffset = gameObject.transform.position - Global.GetMouseWorldPosition();
-        PlayerManager.Instance.ratHeld = true;
-        isHeld = true;
+        PlayerManager.Instance.isHeld = true;
     }
 
     private void OnMouseDrag()
@@ -33,14 +34,11 @@ public class TailDrag : UnitySingleton<TailDrag>
 
     private void OnMouseUp()
     {
-        if (isHeld)
+        if (PlayerManager.Instance.isHeld)
         {
-            GameManager.Instance.ThrowRat();
-            PlayerManager.Instance.ratHeld = false;
-            PlayerManager.Instance.ratThrown = true;
-            this.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            rat.GetComponent<RatClamp>().ignoreClamp = true;
-            this.GetComponent<Rigidbody2D>().mass = 0f; 
+            tailRb.bodyType = RigidbodyType2D.Dynamic;
+            tailRb.mass = 0f;
+            PlayerManager.Instance.ThrowRat();
         }
     }
 }

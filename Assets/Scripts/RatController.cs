@@ -33,10 +33,11 @@ public class RatController : MonoBehaviour
         }
 
         masterRat = newMasterRat;
-        TailDrag.Instance.rat = newMasterRat.gameObject;
-        TailDrag.Instance.joint = newMasterRat.joint;
+        PlayerManager.Instance.currentRat = newMasterRat.gameObject;
+        TailDrag tailDrag = Global.FindComponent<TailDrag>(PlayerManager.Instance.gameObject);
+        tailDrag.joint = newMasterRat.joint;
         newMasterRat.joint.enabled = true;
-        newMasterRat.joint.connectedBody = TailDrag.Instance.GetComponent<Rigidbody2D>();
+        newMasterRat.joint.connectedBody = tailDrag.GetComponent<Rigidbody2D>();
         
     }
 
