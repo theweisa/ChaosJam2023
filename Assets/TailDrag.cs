@@ -19,26 +19,25 @@ public class TailDrag : UnitySingleton<TailDrag>
         lr.SetPosition(1, rat.transform.position);
     }
 
-    private Vector3 GetMouseWorldPosition()
-    {
-        return Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    }
-
     private void OnMouseDown()
     {
-        mousePositionOffset = gameObject.transform.position - GetMouseWorldPosition();
+        mousePositionOffset = gameObject.transform.position - Global.GetMouseWorldPosition();
+        PlayerManager.Instance.ratHeld = true;
         isHeld = true;
     }
 
     private void OnMouseDrag()
     {
-        transform.position = GetMouseWorldPosition() + mousePositionOffset;
+        transform.position = Global.GetMouseWorldPosition() + mousePositionOffset;
     }
 
     private void OnMouseUp()
     {
         if (isHeld)
         {
+            GameManager.Instance.ThrowRat();
+            PlayerManager.Instance.ratHeld = false;
+            PlayerManager.Instance.ratThrown = true;
             this.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             rat.GetComponent<RatClamp>().ignoreClamp = true;
             this.GetComponent<Rigidbody2D>().mass = 0f; 
