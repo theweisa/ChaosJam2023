@@ -1225,6 +1225,7 @@ GameObject:
   - component: {fileID: 1651916422}
   - component: {fileID: 1651916421}
   - component: {fileID: 1651916420}
+  - component: {fileID: 1651916427}
   m_Layer: 0
   m_Name: Tail
   m_TagString: Untagged
@@ -1517,8 +1518,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d95a08b1a01b0d843839ed9a8a34ffad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tailRb: {fileID: 0}
   joint: {fileID: 6760635485903899018}
-  rat: {fileID: 6760635485903899019}
   lr: {fileID: 1651916421}
 --- !u!212 &1651916425
 SpriteRenderer:
@@ -1587,6 +1588,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1651916427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651916419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef5c6e438b6b5c499767ccc0388ef69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentRat: {fileID: 6760635485903899019}
+  tail: {fileID: 1651916419}
+  isHeld: 0
+  stopVelocity: 0.2
 --- !u!1001 &1014113126872868034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1937,6 +1954,10 @@ PrefabInstance:
     - target: {fileID: 1939601282897241519, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
       propertyPath: m_Name
       value: Rat
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939601282897241519, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7580050985035309851, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
       propertyPath: m_LocalPosition.x
