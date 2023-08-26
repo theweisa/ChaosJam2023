@@ -930,6 +930,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4457472333924074563, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7841913091570838569, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
       propertyPath: stopDuration
       value: 2.3
