@@ -6,9 +6,15 @@ using Cinemachine;
 public class CameraManager : UnitySingleton<CameraManager>
 {
     public CameraState currentCameraState = CameraState.StageView;
+    public CinemachineBrain mainCamera;
 
-    [SerializeField] private CinemachineVirtualCamera playerCamera, collisionCamera, stageCamera;
+    [SerializeField] public CinemachineVirtualCamera playerCamera, collisionCamera, stageCamera;
 
+    public CinemachineVirtualCamera currentCamera;
+    public override void Awake() {
+        base.Awake();
+        //currentCamera = mainCamera.ActiveVirtualCamera.VirtualCameraGameObject.GetComponent<CinemachineVirtualCamera>();
+    }
     private void UpdateCameraFromState()
     {
         switch (currentCameraState)
@@ -26,5 +32,10 @@ public class CameraManager : UnitySingleton<CameraManager>
     {
         currentCameraState = newState;
         UpdateCameraFromState();
+    }
+    public void PanToCamera(CinemachineVirtualCamera cam) {
+        mainCamera.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);
+        cam.gameObject.SetActive(true);
+        currentCamera = cam;
     }
 }

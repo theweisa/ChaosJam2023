@@ -13,23 +13,9 @@ public class LevelManager : MonoBehaviour
         level ends once you break through the sewer grate
     */
     // Start is called before the first frame update
+    public Transform breakables;
     void Start()
     {
-        StartCoroutine(StartLevel());
-    }
-
-    public IEnumerator StartLevel() {
-        // claw machine comes down with mouse
-        // pan to the scene
-        // pan back
-        yield return null;
-    }
-
-    public IEnumerator PlayerTurn() {
-        // allow the player to click on the mouse (show an indicator)
-        // wait until the player flings the mouse
-        // when they do, pan to the screen until velocity is less than a certain amount
-        // pan back and redo the player turn; unless the gate breaks
-        yield return null;
+        StartCoroutine(GameManager.Instance.StartLevel(this));
     }
 }
