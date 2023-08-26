@@ -30,6 +30,7 @@ public class PlayerManager : UnitySingleton<PlayerManager>
         CameraManager.Instance.PanToCamera(CameraManager.Instance.playerCamera);
         isHeld = true;
         GameManager.Instance.gameState = GameManager.GameState.Throwing;
+        GameManager.Instance.levelWalls.SetLeftWallEnable(false);
 
     }
 

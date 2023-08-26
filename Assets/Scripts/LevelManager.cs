@@ -13,9 +13,9 @@ public class LevelManager : MonoBehaviour
         level ends once you break through the sewer grate
     */
     // Start is called before the first frame update
-    public Transform breakables;
     void Start()
     {
+        Debug.Log(GameManager.Instance);
         StartCoroutine(GameManager.Instance.StartLevel(this));
     }
 }
