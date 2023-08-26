@@ -159,7 +159,7 @@ public class Breakable : MonoBehaviour
 
         Debug.Log("felt a collision with impulse: " + impulse);
 
-        if (isInvincible)
+        if (isInvincible || currentBreakHealth == -1f)
         {
             return;
         }
