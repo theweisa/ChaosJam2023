@@ -38,7 +38,7 @@ public class TailDrag : MonoBehaviour
         {
             tailRb.bodyType = RigidbodyType2D.Dynamic;
             tailRb.mass = 0f;
-            PlayerManager.Instance.ThrowRat();
+            StartCoroutine(PlayerManager.Instance.ThrowRat());
         }
     }
 }

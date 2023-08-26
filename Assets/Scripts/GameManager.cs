@@ -29,7 +29,7 @@ public class GameManager : UnitySingleton<GameManager>
         // pan to the scene
         CameraManager.Instance.PanToCamera(CameraManager.Instance.collisionCamera);
         // pan back
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(4.4f);
         CameraManager.Instance.PanToCamera(CameraManager.Instance.playerCamera);
         yield return new WaitForSeconds(3f);
         InitThrowing();
