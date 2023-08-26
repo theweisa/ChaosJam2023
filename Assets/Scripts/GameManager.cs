@@ -27,9 +27,9 @@ public class GameManager : UnitySingleton<GameManager>
         gameState = GameState.Start;
         // claw machine comes down with mouse
         // pan to the scene
-        CameraManager.Instance.PanToCamera(CameraManager.Instance.collisionCamera);
+        CameraManager.Instance.PanToCamera(CameraManager.Instance.initialCollisionCamera);
         // pan back
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(4.4f);
         CameraManager.Instance.PanToCamera(CameraManager.Instance.playerCamera);
         yield return new WaitForSeconds(3f);
         InitThrowing();

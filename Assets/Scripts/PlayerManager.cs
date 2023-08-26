@@ -20,12 +20,14 @@ public class PlayerManager : UnitySingleton<PlayerManager>
 
         CameraManager.Instance.PanToCamera(CameraManager.Instance.collisionCamera);
         yield return new WaitUntil(() => currentRat.GetComponent<Rigidbody2D>().velocity.magnitude <= stopVelocity);
+        yield return new WaitForSeconds(2f);
         if (GameManager.Instance.gameState != GameManager.GameState.Win) {
             ResetRat();
         }
     }
 
     public void ResetRat() {
+        CameraManager.Instance.PanToCamera(CameraManager.Instance.playerCamera);
         isHeld = true;
         GameManager.Instance.gameState = GameManager.GameState.Throwing;
 
