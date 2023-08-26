@@ -934,6 +934,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6838936222053626406, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
+      propertyPath: m_Mass
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6838936222053626406, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6838936222053626406, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
+      propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7841913091570838569, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
       propertyPath: stopDuration
       value: 2.3
