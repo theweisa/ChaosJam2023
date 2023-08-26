@@ -18,7 +18,7 @@ public class PlayerManager : UnitySingleton<PlayerManager>
         GameManager.Instance.gameState = GameManager.GameState.Thrown;
         currentRat.GetComponent<RatClamp>().ignoreClamp = true;
 
-        CameraManager.Instance.PanToCamera(CameraManager.Instance.initialCollisionCamera);
+        CameraManager.Instance.PanToCamera(CameraManager.Instance.collisionCamera);
         yield return new WaitUntil(() => currentRat.GetComponent<Rigidbody2D>().velocity.magnitude <= stopVelocity);
         yield return new WaitForSeconds(2f);
         if (GameManager.Instance.gameState != GameManager.GameState.Win) {

@@ -941,6 +941,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2537883700766348854, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
+      propertyPath: orthographic size
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3088124167188083408, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
       propertyPath: m_CustomBlends
       value: 
@@ -952,6 +956,10 @@ PrefabInstance:
     - target: {fileID: 4525199765292133294, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
       propertyPath: m_Priority
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4525199765292133294, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4621960957062644738, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1029,7 +1037,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2557893741988831258, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4919030246681605526, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
