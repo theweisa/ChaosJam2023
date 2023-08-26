@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class TailDrag : MonoBehaviour
+public class TailDrag : UnitySingleton<TailDrag>
 {
     Vector3 mousePositionOffset;
     public SpringJoint2D joint;
@@ -13,6 +13,8 @@ public class TailDrag : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //lr.SetPosition(0, (Vector3)joint.connectedAnchor);
+        //lr.SetPosition(1, (Vector3)joint.anchor);
         lr.SetPosition(0, this.transform.position);
         lr.SetPosition(1, rat.transform.position);
     }
