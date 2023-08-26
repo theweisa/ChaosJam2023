@@ -358,7 +358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5311581910257389032, guid: d52cc823b995f89449b207362647bbd1, type: 3}
       propertyPath: m_Mass
-      value: 125.58068
+      value: 125.58067
       objectReference: {fileID: 0}
     - target: {fileID: 5311581910257389032, guid: d52cc823b995f89449b207362647bbd1, type: 3}
       propertyPath: m_Material
@@ -629,7 +629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7451500564604159697, guid: c44f94aede82164438dba42b76c07f75, type: 3}
       propertyPath: m_Mass
-      value: 41.05288
+      value: 41.052868
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -698,7 +698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7451500564604159697, guid: c44f94aede82164438dba42b76c07f75, type: 3}
       propertyPath: m_Mass
-      value: 29.900166
+      value: 29.900158
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -867,7 +867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7451500564604159697, guid: c44f94aede82164438dba42b76c07f75, type: 3}
       propertyPath: m_Mass
-      value: 29.900166
+      value: 29.900158
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1152,7 +1152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7451500564604159697, guid: c44f94aede82164438dba42b76c07f75, type: 3}
       propertyPath: m_Mass
-      value: 37.375202
+      value: 37.375206
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1410,7 +1410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5311581910257389032, guid: d52cc823b995f89449b207362647bbd1, type: 3}
       propertyPath: m_Mass
-      value: 149.50085
+      value: 149.50082
       objectReference: {fileID: 0}
     - target: {fileID: 5311581910257389032, guid: d52cc823b995f89449b207362647bbd1, type: 3}
       propertyPath: m_Material
