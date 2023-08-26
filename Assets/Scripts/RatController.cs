@@ -85,6 +85,10 @@ public class RatController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        preVelocity = GetComponent<Rigidbody2D>().velocity;
+        if (GetComponent<Rigidbody2D>())
+        {
+            preVelocity = GetComponent<Rigidbody2D>().velocity;
+        }
+        
     }
 }
