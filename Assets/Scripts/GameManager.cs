@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : UnitySingleton<GameManager>
 {
-    public enum GameState { Start, Throwing, Thrown, LevelEntered, Win}
+    public enum GameState { Start, Throwing, Thrown, ResetRat, Win}
     public GameState gameState = GameState.Start;
     
     public TriggerEnterBox levelWalls;
@@ -42,7 +42,6 @@ public class GameManager : UnitySingleton<GameManager>
     public void OnLevelEnter() {
         if (gameState != GameState.Throwing) return;
         Debug.Log("entered!");
-        gameState = GameState.LevelEntered;
         levelWalls.SetWallEnable(TriggerEnterBox.WallType.Left, true);
     }
 
