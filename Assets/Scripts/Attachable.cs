@@ -12,7 +12,7 @@ public class Attachable : MonoBehaviour
 
             RatController thisRat = GetComponent<RatController>();
 
-            if (thisRat != null && !thisRat.isAttached)
+            if (thisRat != null && !thisRat.isAttached && collidedRat.isAttached)
             {
                 thisRat.isAttached = true;
                 collidedRat.AttachRat(thisRat, collision.contacts[0]);
