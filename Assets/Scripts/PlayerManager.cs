@@ -56,7 +56,7 @@ public class PlayerManager : UnitySingleton<PlayerManager>
     }
 
     public IEnumerator RatStopped() {
-        if (GameManager.Instance.gameState != GameManager.GameState.Win) {
+        if (GameManager.Instance.gameState == GameManager.GameState.Thrown) {
             GameManager.Instance.gameState = GameManager.GameState.ResetRat;
             CameraManager.Instance.PanToCamera(CameraManager.Instance.initialCollisionCamera);
             yield return new WaitForSeconds(2f);
