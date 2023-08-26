@@ -17,7 +17,7 @@ public class RatClamp : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!ignoreClamp)
+        if (!ignoreClamp && rb)
         {
             rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxAngularVelocity);
             if(rb.angularVelocity > maxAngularVelocity ) {
