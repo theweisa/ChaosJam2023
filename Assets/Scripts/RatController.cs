@@ -6,6 +6,7 @@ public class RatController : MonoBehaviour
 {
     public static RatController masterRat;
     public SpringJoint2D joint;
+    public SpriteRenderer tailSprite;
     public Vector3 preVelocity = Vector3.zero;
 
     public bool isMaster = false;
