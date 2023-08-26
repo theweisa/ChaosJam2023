@@ -8,6 +8,7 @@ public class GameManager : UnitySingleton<GameManager>
     public GameState gameState = GameState.Start;
     
     public TriggerEnterBox levelWalls;
+    public GameObject damageText;
     /*
         logic:
             game starts by panning to the area then panning back

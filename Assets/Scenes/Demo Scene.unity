@@ -986,6 +986,10 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 7363595101410658304, guid: ccd861df915c1b24f824dbccafd6599b, type: 3}
+      propertyPath: damageText
+      value: 
+      objectReference: {fileID: 3083374027500757459, guid: 316f6040955c9804286636a847543077, type: 3}
+    - target: {fileID: 7363595101410658304, guid: ccd861df915c1b24f824dbccafd6599b, type: 3}
       propertyPath: levelWalls
       value: 
       objectReference: {fileID: 657288571}
