@@ -41,9 +41,19 @@ public class RatController : MonoBehaviour
         
     }
 
-    public void AttachRat()
+    public void AttachRat(RatController rat, ContactPoint2D contactPoint)
     {
+        FixedJoint2D newJoint = gameObject.AddComponent<FixedJoint2D>();
+        newJoint.anchor = contactPoint.point;
+        newJoint.connectedBody = contactPoint.otherCollider.transform.GetComponentInParent<Rigidbody2D>();
+        newJoint.enableCollision = false;
+        newJoint.dampingRatio = 1;
+        newJoint.breakAction = JointBreakAction2D.Ignore;
 
+        if (tailTriggered && masterRat == this)
+        {
+            SetNewMasterRat(rat);
+        }
     }
 
     private void Update()
