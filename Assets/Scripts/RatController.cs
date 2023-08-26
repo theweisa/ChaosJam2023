@@ -6,6 +6,7 @@ public class RatController : MonoBehaviour
 {
     public static RatController masterRat;
     public SpringJoint2D joint;
+    public Vector3 preVelocity = Vector3.zero;
 
     public bool isMaster = false;
     public bool isAttached = false;
@@ -81,5 +82,14 @@ public class RatController : MonoBehaviour
         {
             SetNewMasterRat(this);
         }
+    }
+
+    private void FixedUpdate()
+    {
+        if (GetComponent<Rigidbody2D>())
+        {
+            preVelocity = GetComponent<Rigidbody2D>().velocity;
+        }
+        
     }
 }

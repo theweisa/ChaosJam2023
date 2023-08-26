@@ -159,7 +159,7 @@ public class Breakable : MonoBehaviour
 
         Debug.Log("felt a collision with impulse: " + impulse);
 
-        if (isInvincible)
+        if (isInvincible || currentBreakHealth == -1f)
         {
             return;
         }
@@ -169,6 +169,14 @@ public class Breakable : MonoBehaviour
         if(currentBreakHealth <= 0)
         {
             Debug.Log("I broke!");
+
+            RatController rat = collision.transform.GetComponent<RatController>();
+
+            if (rat && collision.gameObject.GetComponent<Rigidbody2D>())
+            {
+                collision.gameObject.GetComponent<Rigidbody2D>().velocity = rat.preVelocity;
+            }
+            
             OnBreakEvent.Invoke();
             Destroy(gameObject);
         }
