@@ -55,6 +55,7 @@ MonoBehaviour:
   autoGenerateBreakCoefficient: 1
   breakCoefficient: 9.3438
   currentBreakHealth: 9.3438
+  minBreakForce: 5
   isInvincible: 1
   OnBreakEvent:
     m_PersistentCalls:

@@ -11,12 +11,15 @@ public class PlayerManager : UnitySingleton<PlayerManager>
     public float stopVelocity = 0.2f;
     public float stopDuration = 3f;
     public float stopTimer = 0f;
+    public float lifespan = 10f;
+    private float lifespanTimer = 0f;
     public Transform playerStartPosition, playerEndPosition;
     // Start is called before the first frame update
     public override void Awake()
     {
         base.Awake();
         stopTimer = 0f;
+        lifespanTimer = 0f;
     }
 
     void Update() {
@@ -26,10 +29,14 @@ public class PlayerManager : UnitySingleton<PlayerManager>
     }
 
     void TrackThrowVelocity() {
+        lifespanTimer += Time.deltaTime;
+        if (lifespanTimer > lifespan) {
+            StartCoroutine(RatStopped());
+            return;
+        }
         if (currentRat.GetComponent<Rigidbody2D>().velocity.magnitude <= stopVelocity) {
             stopTimer += Time.deltaTime;
             if (stopTimer >= stopDuration) {
-                GameManager.Instance.gameState = GameManager.GameState.ResetRat;
                 StartCoroutine(RatStopped());
             }
         }
@@ -49,7 +56,8 @@ public class PlayerManager : UnitySingleton<PlayerManager>
     }
 
     public IEnumerator RatStopped() {
-        if (GameManager.Instance.gameState != GameManager.GameState.Win) {
+        if (GameManager.Instance.gameState == GameManager.GameState.Thrown) {
+            GameManager.Instance.gameState = GameManager.GameState.ResetRat;
             CameraManager.Instance.PanToCamera(CameraManager.Instance.initialCollisionCamera);
             yield return new WaitForSeconds(2f);
             CameraManager.Instance.PanToCamera(CameraManager.Instance.playerCamera);
@@ -59,6 +67,7 @@ public class PlayerManager : UnitySingleton<PlayerManager>
 
     public IEnumerator ResetRat(bool start=false) {
         stopTimer = 0f;
+        lifespanTimer = 0f;
         tail.GetComponent<LineRenderer>().enabled = true;
         currentRat.GetComponent<RatController>().tailSprite.enabled = false;
         Rigidbody2D tailRb = tail.GetComponent<Rigidbody2D>();

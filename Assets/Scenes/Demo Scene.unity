@@ -996,6 +996,10 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 7363595101410658304, guid: ccd861df915c1b24f824dbccafd6599b, type: 3}
+      propertyPath: damageText
+      value: 
+      objectReference: {fileID: 3083374027500757459, guid: 316f6040955c9804286636a847543077, type: 3}
+    - target: {fileID: 7363595101410658304, guid: ccd861df915c1b24f824dbccafd6599b, type: 3}
       propertyPath: levelWalls
       value: 
       objectReference: {fileID: 657288571}
@@ -1075,7 +1079,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4207979266369258566, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.566667
+      value: 16.733334
       objectReference: {fileID: 0}
     - target: {fileID: 4919030246681605526, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1123,28 +1127,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6639875042218265680, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.7
+      value: 50.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915593822612281192, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
+      propertyPath: m_PositionMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8915593822612281192, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
       propertyPath: m_Targets.Array.data[0].radius
-      value: 0
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8915593822612281192, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
       propertyPath: m_Targets.Array.data[1].radius
-      value: 0
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8915593822612281192, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
       propertyPath: m_Targets.Array.data[1].target
       value: 
       objectReference: {fileID: 1105644534}
-    - target: {fileID: 8915593822612281192, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
-      propertyPath: m_Targets.Array.data[1].weight
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9121599688053773472, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 28.7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

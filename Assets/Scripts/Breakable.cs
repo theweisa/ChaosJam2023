@@ -32,6 +32,7 @@ public class Breakable : MonoBehaviour
     [SerializeField] private bool autoGenerateBreakCoefficient = true;
     public float breakCoefficient = 50f;
     public float currentBreakHealth = 50f;
+    public float minBreakForce = 1f;
 
     [Space(10)]
     public bool isInvincible = true;
@@ -152,10 +153,13 @@ public class Breakable : MonoBehaviour
     {
         float impulse = collision.contacts[0].normalImpulse;
 
-        if(Mathf.Approximately(impulse, 0))
-        {
+        if (impulse < minBreakForce) {
             return;
         }
+        /*if(Mathf.Approximately(impulse, 0))
+        {
+            return;
+        }*/
 
         Debug.Log("felt a collision with impulse: " + impulse);
 
@@ -165,6 +169,8 @@ public class Breakable : MonoBehaviour
         }
 
         currentBreakHealth -= impulse;
+        var txt = Instantiate(GameManager.Instance.damageText, collision.contacts[0].point, Quaternion.identity);
+        txt.GetComponent<DamageText>().Init(impulse);
 
         if(currentBreakHealth <= 0)
         {
