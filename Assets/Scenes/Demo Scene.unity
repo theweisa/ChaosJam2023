@@ -123,6 +123,91 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &583132808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 583132809}
+  - component: {fileID: 583132811}
+  - component: {fileID: 583132810}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &583132809
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583132808}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.00295, y: 13.816539, z: -0.20162162}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &583132810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583132808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e8699df90f8a1042a36f2d83e1fb7ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RatImpact>k__BackingField:
+    Guid:
+      Data1: 1130749348
+      Data2: 1240858121
+      Data3: -1091655755
+      Data4: 1708094352
+    Path: event:/Impact
+  <BoxDestruction>k__BackingField:
+    Guid:
+      Data1: 1513562128
+      Data2: 1309354522
+      Data3: -489837426
+      Data4: -1243336473
+    Path: event:/Destruction
+  <RatFlying>k__BackingField:
+    Guid:
+      Data1: -441329897
+      Data2: 1313468323
+      Data3: -1393389912
+      Data4: -1631177551
+    Path: event:/RatFalling
+  <RatSwinging>k__BackingField:
+    Guid:
+      Data1: -1961656119
+      Data2: 1126125577
+      Data3: -1647870275
+      Data4: -1445172579
+    Path: event:/RatSpinning
+--- !u!114 &583132811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583132808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5811341c3fd5c704ba1847aaaf55add1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,10 +750,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6898925960853836223, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 995561890}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
 --- !u!1001 &8801588906396759029
 PrefabInstance:
@@ -757,10 +839,10 @@ SceneRoots:
   m_Roots:
   - {fileID: 619394802}
   - {fileID: 3764495269412133164}
-  - {fileID: 1654845781}
   - {fileID: 6407296261559552598}
   - {fileID: 4611476023236210430}
   - {fileID: 1093467988}
   - {fileID: 1756094661275680311}
   - {fileID: 8801588906396759029}
   - {fileID: 1114367245}
+  - {fileID: 583132809}
