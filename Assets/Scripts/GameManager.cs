@@ -21,6 +21,17 @@ public class GameManager : UnitySingleton<GameManager>
     {
         base.Awake();
         Time.timeScale = 1;
+        
+    }
+
+    private void Start()
+    {
+        StartCoroutine(LoadLevel());
+    }
+
+    public IEnumerator LoadLevel()
+    {
+        yield return null;
         SceneManager.LoadScene(SaveManager.Instance.levelToLoad, LoadSceneMode.Additive);
     }
 
