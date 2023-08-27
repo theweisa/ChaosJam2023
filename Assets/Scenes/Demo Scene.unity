@@ -220,7 +220,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3609269172169767152, guid: 5d694082e046e3e47821d00227de1d1f, type: 3}
       propertyPath: levelToLoad
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3609269172169767152, guid: 5d694082e046e3e47821d00227de1d1f, type: 3}
       propertyPath: currentLevel
