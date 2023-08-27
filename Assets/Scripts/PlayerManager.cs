@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using FMODUnity;
+using FMOD.Studio;
 
 public class PlayerManager : UnitySingleton<PlayerManager>
 {
@@ -13,6 +15,8 @@ public class PlayerManager : UnitySingleton<PlayerManager>
     public float stopTimer = 0f;
     public float lifespan = 10f;
     private float lifespanTimer = 0f;
+    private EventInstance ratFlying;
+    private EventInstance ratSpinning;
     public Transform playerStartPosition, playerEndPosition;
     // Start is called before the first frame update
     public override void Awake()
@@ -54,12 +58,21 @@ public class PlayerManager : UnitySingleton<PlayerManager>
         }
     }
 
+
     public void ThrowRat() {
         isHeld = false;
         GameManager.Instance.gameState = GameManager.GameState.Thrown;
         currentRat.GetComponent<RatClamp>().ignoreClamp = true;
         tail.GetComponent<LineRenderer>().enabled = false;
         currentRat.GetComponent<RatController>().tailSprite.enabled = true;
+        
+        ratFlying = AudioManager.instance.CreateEventInstance(FMODEventRef.instance.RatFlying);
+        ratFlying.setParameterByName("RatFlightTime", 0);
+        currentRat.GetComponent<RatController>().ratFlightTime = 0;
+        FMODUnity.RuntimeManager.PlayOneShot(FMODEventRef.instance.RatRelease);
+        ratSpinning.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        ratSpinning.release();
+        ratFlying.start();
 
         CameraManager.Instance.PanToCamera(CameraManager.Instance.collisionCamera);
     }
@@ -78,6 +91,8 @@ public class PlayerManager : UnitySingleton<PlayerManager>
     }
 
     public IEnumerator PickUpRat() {
+        ratSpinning = AudioManager.instance.CreateEventInstance(FMODEventRef.instance.RatSwinging);
+        ratSpinning.start();
         Rigidbody2D tailRb = tail.GetComponent<Rigidbody2D>();
         Vector2 tailPos = currentRat.GetComponent<RatController>().tailSprite.transform.position;
         claw.SetActive(true);
@@ -113,6 +128,8 @@ public class PlayerManager : UnitySingleton<PlayerManager>
     }
 
     public IEnumerator ResetRat(bool start=false) {
+        ratFlying.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        ratFlying.release();
         stopTimer = 0f;
         lifespanTimer = 0f;
         tail.GetComponent<LineRenderer>().enabled = true;
