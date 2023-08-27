@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class UIManager : UnitySingleton<UIManager>
 {
-    
+    public PauseUI pauseUI;
+    public WinUI winUI;
 }

@@ -9,6 +9,7 @@ public class GameManager : UnitySingleton<GameManager>
     
     public TriggerEnterBox levelWalls;
     public GameObject damageText;
+    public bool isPaused = false;
     /*
         logic:
             game starts by panning to the area then panning back
@@ -18,6 +19,7 @@ public class GameManager : UnitySingleton<GameManager>
     public override void Awake()
     {
         base.Awake();
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -59,5 +61,44 @@ public class GameManager : UnitySingleton<GameManager>
     public IEnumerator WinRoutine()
     {
         yield return null;
+        TogglePause(false);
+        Time.timeScale = 0;
+        UIManager.Instance.winUI.TogglePanel(true);
+    }
+
+    public void TogglePause()
+    {
+        if(gameState == GameState.Win)
+        {
+            return;
+        }
+
+        isPaused = !isPaused;
+        UpdatePauseState();
+    }
+
+    public void TogglePause(bool state)
+    {
+        if (gameState == GameState.Win)
+        {
+            return;
+        }
+
+        isPaused = state;
+        UpdatePauseState();
+    }
+
+    private void UpdatePauseState()
+    {
+        if (isPaused)
+        {
+            Time.timeScale = 0;
+            UIManager.Instance.pauseUI.TogglePanel(true);
+        }
+        else
+        {
+            Time.timeScale = 1;
+            UIManager.Instance.pauseUI.TogglePanel(false);
+        }
     }
 }

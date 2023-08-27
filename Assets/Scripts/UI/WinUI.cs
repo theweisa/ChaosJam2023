@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class WinUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void TogglePanel(bool state)
     {
-        
+        gameObject.SetActive(state);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void NextLevel()
     {
-        
+
+    }
+
+    public void MainMenu()
+    {
+
     }
 }
