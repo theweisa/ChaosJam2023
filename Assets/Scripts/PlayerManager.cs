@@ -83,10 +83,13 @@ public class PlayerManager : UnitySingleton<PlayerManager>
         claw.SetActive(true);
         Global.FadeIn(claw.GetComponent<SpriteRenderer>(), 0.3f);
         claw.GetComponent<Animator>().SetBool("holding", false);
-        claw.transform.position = new Vector2(tailPos.x, playerStartPosition.position.y);
-        LeanTween.moveY(claw, currentRat.GetComponent<RatController>().tailSprite.transform.position.y, 2f);
+        claw.transform.position = new Vector2(tailPos.x, tailPos.y+20f);
+        LeanTween.moveY(claw, tailPos.y, 2f);
         yield return new WaitForSeconds(3f);
         claw.GetComponent<Animator>().SetBool("holding", true);
+        currentRat.GetComponent<RatController>().tailSprite.enabled = false;
+        tail.GetComponent<LineRenderer>().enabled = true;
+
 
         foreach (Collider2D coll in currentRat.GetComponents<Collider2D>()) {
             coll.enabled = false;
