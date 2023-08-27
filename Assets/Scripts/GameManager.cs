@@ -34,6 +34,9 @@ public class GameManager : UnitySingleton<GameManager>
         yield return null;
         SceneManager.LoadScene(SaveManager.Instance.levelToLoad, LoadSceneMode.Additive);
     }
+    void Start() {
+        levelWalls = Global.FindComponent<TriggerEnterBox>(LevelManager.Instance.levelWalls.gameObject);
+    }
 
     // Update is called once per frame
     void Update()
@@ -41,7 +44,7 @@ public class GameManager : UnitySingleton<GameManager>
         
     }
 
-    public IEnumerator StartLevel(LevelManager level) {
+    public IEnumerator StartLevel() {
         gameState = GameState.Start;
         yield return PlayerManager.Instance.ResetRat(true);
         // claw machine comes down with mouse
@@ -58,7 +61,7 @@ public class GameManager : UnitySingleton<GameManager>
     public void OnLevelEnter() {
         if (gameState != GameState.Throwing) return;
         Debug.Log("entered!");
-        levelWalls.SetWallEnable(TriggerEnterBox.WallType.Left, true);
+        //LevelManager.Instance.levelWalls.SetWallEnable(TriggerEnterBox.WallType.Left, true);
     }
 
     public void InitThrowing() {
