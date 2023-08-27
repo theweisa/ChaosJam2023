@@ -64,6 +64,7 @@ public class GameManager : UnitySingleton<GameManager>
         musicProgression = 0;
         RuntimeManager.StudioSystem.setParameterByName("RatProgression", 0);   
         levelMusic.start();
+        AudioManager.instance.musicStarted = true;
         collisionCameraPos.transform.position = new Vector2(levelWalls.grate.position.x, collisionCameraPos.transform.position.y);
         CameraManager.Instance.initialCollisionCamera.transform.position = new Vector3(levelWalls.grate.position.x, collisionCameraPos.transform.position.y, CameraManager.Instance.initialCollisionCamera.transform.position.z);
         Debug.Log(cameraConfines.points.Length);

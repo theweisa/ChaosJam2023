@@ -10,6 +10,11 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance {get; private set; }
   
     private List<EventInstance> eventInstances;
+    public bool musicStarted = false;
+    public float bpm = 170;
+    float beatTimer = 0;
+    float secondsPerBeat;
+    [HideInInspector] public bool onBeat = false;
 
     private void Awake()
     {
@@ -19,6 +24,22 @@ public class AudioManager : MonoBehaviour
         }
         instance = this;
         eventInstances = new List<EventInstance>();
+        secondsPerBeat = 1f/(bpm/60f);
+    }
+
+    void Update() {
+        onBeat = false;
+        if (musicStarted) {
+            beatTimer += Time.deltaTime;
+            if (beatTimer >= secondsPerBeat) {
+                beatTimer -= secondsPerBeat;
+                onBeat = true;
+            }
+        }
+        else {
+            beatTimer = 0f;
+        }
+        
     }
 
     public EventInstance CreateEventInstance(EventReference eventReference)

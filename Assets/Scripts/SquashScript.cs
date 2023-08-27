@@ -9,16 +9,32 @@ public class SquashScript : MonoBehaviour
     public float turnDegree = 7f;
     public float turnDegreeOffset = 2f;
     public float squashCoefficient = 0.8f;
+    public int beatsPerGroove = 3;
     Vector2 baseScale;
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+
+    public void StartGrooving() {
         int left = UnityEngine.Random.Range(0, 2) == 0 ? -1 : 1;
-        turnTimer = 1f/(bpm/60f);
+        turnTimer = beatsPerGroove*(1f/(bpm/60f));
         baseScale = transform.localScale;
         //float squashInterval = 
-        LeanTween.scaleY(gameObject, baseScale.y*squashCoefficient, turnTimer*0.5f).setLoopPingPong().setEaseInExpo();
+        Squash();
         Rotate(left);
+    }
+    void Squash() {
+        LeanTween.scaleY(gameObject, baseScale.y*squashCoefficient, turnTimer*0.1f).setEaseInExpo().setOnComplete(()=>{
+            LeanTween.scaleY(gameObject, baseScale.y, turnTimer*0.9f).setEaseOutExpo().setOnComplete(()=>{
+                Squash();
+            });
+        });
+    }
+    public IEnumerator GrooveOnBeat() {
+        yield return new WaitUntil(()=>AudioManager.instance.onBeat);
+        StartGrooving();
     }
 
     void Rotate(int left=1) {
