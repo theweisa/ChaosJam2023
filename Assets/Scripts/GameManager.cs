@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMODUnity;
+using FMOD.Studio;
 
 public class GameManager : UnitySingleton<GameManager>
 {
@@ -15,6 +17,9 @@ public class GameManager : UnitySingleton<GameManager>
     public Transform collisionCameraPos;
     public GameObject damageText;
     public bool isPaused = false;
+    public int musicProgression;
+    private EventInstance levelAmbience;
+    private EventInstance levelMusic;
     /*
         logic:
             game starts by panning to the area then panning back
@@ -53,6 +58,12 @@ public class GameManager : UnitySingleton<GameManager>
 
     public IEnumerator StartLevel() {
         gameState = GameState.Start;
+        levelAmbience = AudioManager.instance.CreateEventInstance(FMODEventRef.instance.SewerAmbience);
+        levelAmbience.start();
+        levelMusic = AudioManager.instance.CreateEventInstance(FMODEventRef.instance.LevelMusic);
+        musicProgression = 0;
+        RuntimeManager.StudioSystem.setParameterByName("RatProgression", 0);   
+        levelMusic.start();
         collisionCameraPos.transform.position = new Vector2(levelWalls.grate.position.x, collisionCameraPos.transform.position.y);
         CameraManager.Instance.initialCollisionCamera.transform.position = new Vector3(levelWalls.grate.position.x, collisionCameraPos.transform.position.y, CameraManager.Instance.initialCollisionCamera.transform.position.z);
         Debug.Log(cameraConfines.points.Length);
@@ -97,6 +108,9 @@ public class GameManager : UnitySingleton<GameManager>
 
     public IEnumerator WinRoutine()
     {
+        levelAmbience.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        levelAmbience.release();
+        RuntimeManager.StudioSystem.setParameterByName("RatProgression", 10);      
         yield return null;
         TogglePause(false);
         CameraManager.Instance.PanToCamera(CameraManager.Instance.winCamera);

@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &325494471168508748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7852695232636529617}
+  - component: {fileID: 6235586978149584796}
+  - component: {fileID: 580392337026320253}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7852695232636529617
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325494471168508748}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.00295, y: 13.816539, z: -0.20162162}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6235586978149584796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325494471168508748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5811341c3fd5c704ba1847aaaf55add1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &580392337026320253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325494471168508748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e8699df90f8a1042a36f2d83e1fb7ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RatImpact>k__BackingField:
+    Guid:
+      Data1: 1130749348
+      Data2: 1240858121
+      Data3: -1091655755
+      Data4: 1708094352
+    Path: event:/Impact
+  <BoxDestruction>k__BackingField:
+    Guid:
+      Data1: 1513562128
+      Data2: 1309354522
+      Data3: -489837426
+      Data4: -1243336473
+    Path: event:/Destruction
+  <RatFlying>k__BackingField:
+    Guid:
+      Data1: -441329897
+      Data2: 1313468323
+      Data3: -1393389912
+      Data4: -1631177551
+    Path: event:/RatFalling
+  <RatSwinging>k__BackingField:
+    Guid:
+      Data1: -1961656119
+      Data2: 1126125577
+      Data3: -1647870275
+      Data4: -1445172579
+    Path: event:/RatSpinning
