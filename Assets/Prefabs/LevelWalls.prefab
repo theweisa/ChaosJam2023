@@ -216,6 +216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftWall: {fileID: 0}
   topWall: {fileID: 6480688068362559075}
+  grate: {fileID: 8715724426693188154}
 --- !u!1 &8290643827275880283
 GameObject:
   m_ObjectHideFlags: 0
