@@ -7,7 +7,9 @@ public class GameManager : UnitySingleton<GameManager>
 {
     public enum GameState { Start, Throwing, Thrown, ResetRat, Win}
     public GameState gameState = GameState.Start;
-    
+    public ExitGrateController grateController;
+    public GameObject goalIndicator;
+    private bool showIndicator = false;
     public TriggerEnterBox levelWalls;
     public PolygonCollider2D cameraConfines;
     public Transform collisionCameraPos;
@@ -37,13 +39,16 @@ public class GameManager : UnitySingleton<GameManager>
         SceneManager.LoadScene(SaveManager.Instance.levelToLoad, LoadSceneMode.Additive);
         yield return null;
         levelWalls = Global.FindComponent<TriggerEnterBox>(LevelManager.Instance.levelWalls.gameObject);
+        grateController = FindObjectOfType<ExitGrateController>().GetComponent<ExitGrateController>();
+
         StartCoroutine(StartLevel());
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public IEnumerator StartLevel() {
@@ -62,6 +67,7 @@ public class GameManager : UnitySingleton<GameManager>
         cameraConfines.SetPath(0, newPoints);
         
         yield return PlayerManager.Instance.ResetRat(true);
+        
         // claw machine comes down with mouse
         // pan to the scene
         CameraManager.Instance.PanToCamera(CameraManager.Instance.initialCollisionCamera);
@@ -133,6 +139,20 @@ public class GameManager : UnitySingleton<GameManager>
         {
             Time.timeScale = 1;
             UIManager.Instance.pauseUI.TogglePanel(false);
+        }
+    }
+
+    public void ShowGoalIndicator()
+    {
+        //Check to see if sewer grate break indicator should spawn
+        int totalRats = FindObjectsOfType<RatController>().Length;
+
+        Debug.Log("RAT " + totalRats * grateController.requiredRatPercentage);
+
+        if (RatController.connectedRats.Count >= totalRats * grateController.requiredRatPercentage && !showIndicator)
+        {
+            Instantiate(goalIndicator, new Vector3(grateController.gameObject.transform.position.x - 10f, grateController.gameObject.transform.position.y, 0), Quaternion.identity);
+            showIndicator = true;
         }
     }
 }

@@ -44,3 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04748763a4f79044cae929bf37e43e89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameState: 0
+  grateController: {fileID: 0}
+  goalIndicator: {fileID: 1410837118412639287, guid: c7774e3b12041fc498c11a8929f818ea, type: 3}
+  levelWalls: {fileID: 0}
+  damageText: {fileID: 0}
+  isPaused: 0
