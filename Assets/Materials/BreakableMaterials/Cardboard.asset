@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14662eaa5a48a0a41af4f0f946af0eab, type: 3}
   m_Name: Cardboard
   m_EditorClassIdentifier: 
-  id: cardboard
+  id: 0
   massCoefficient: 3
-  breakCoefficient: 20
+  breakCoefficient: 17
   physicsMaterial: {fileID: 6200000, guid: 3f7fc290d5e732948a794122a4b98832, type: 2}

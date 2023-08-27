@@ -61,6 +61,7 @@ public class PlayerManager : UnitySingleton<PlayerManager>
             CameraManager.Instance.PanToCamera(CameraManager.Instance.initialCollisionCamera);
             yield return new WaitForSeconds(2f);
             CameraManager.Instance.PanToCamera(CameraManager.Instance.playerCamera);
+            GameManager.Instance.ShowGoalIndicator();
             yield return ResetRat();
         }
     }
