@@ -17,6 +17,12 @@ public class SquashScript : MonoBehaviour
         baseScale = transform.localScale;
     }
 
+    private void OnDisable()
+    {
+        transform.localScale = baseScale;
+        transform.localEulerAngles = Vector3.zero;
+    }
+
     public void StartGrooving() {
         int left = UnityEngine.Random.Range(0, 2) == 0 ? -1 : 1;
         turnTimer = beatsPerGroove*(1f/(bpm/60f));
