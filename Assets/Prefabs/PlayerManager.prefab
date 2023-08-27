@@ -296,6 +296,10 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: -0.010074079
       objectReference: {fileID: 0}
+    - target: {fileID: 6535251338908493245, guid: aef7b4d92e091444b9c579466f7e3a31, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8161609045796073033, guid: aef7b4d92e091444b9c579466f7e3a31, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -406,15 +410,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3383059710080620828, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.9917691
+      value: 0.70687443
       objectReference: {fileID: 0}
     - target: {fileID: 3383059710080620828, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99998945
+      value: -0.9978737
       objectReference: {fileID: 0}
     - target: {fileID: 3383059710080620828, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0045923498
+      value: -0.06517707
       objectReference: {fileID: 0}
     - target: {fileID: 7306413308352298587, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
       propertyPath: m_IsActive
@@ -480,6 +484,10 @@ PrefabInstance:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 1883041014920316526}
+    - target: {fileID: 8792973129433110958, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.04
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
