@@ -5,15 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - MasterRat
-  - Cardboard
-  - Glass
-  - Scrap
   - Wall
+  - Glass
+  - Cardboard
+  - Scrap
+  - Chain
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Tail
   - Water
   - UI
   - FreeRat
@@ -45,7 +46,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: UI
-    uniqueID: 2816981771
     locked: 0

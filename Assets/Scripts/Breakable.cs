@@ -75,7 +75,7 @@ public class Breakable : MonoBehaviour
 
     IEnumerator StartRoutine()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(3f);
         isInvincible = false;
     }
 

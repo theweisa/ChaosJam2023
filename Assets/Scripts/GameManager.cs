@@ -49,4 +49,15 @@ public class GameManager : UnitySingleton<GameManager>
     public void InitThrowing() {
         gameState = GameState.Throwing;
     }
+
+    public void WinGame()
+    {
+        gameState = GameState.Win;
+        StartCoroutine(WinRoutine());
+    }
+
+    public IEnumerator WinRoutine()
+    {
+        yield return null;
+    }
 }

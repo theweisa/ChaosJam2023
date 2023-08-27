@@ -6,7 +6,8 @@ using NaughtyAttributes;
 [CreateAssetMenu(menuName = "Custom/BreakableMaterial")]
 public class BreakableMaterial : ScriptableObject
 {
-    public string id = "null";
+    public enum MaterialType { Cardboard, Glass, Scrap, Chain };
+    public MaterialType id;
     public float massCoefficient = 1;
     public float breakCoefficient = 1;
     public PhysicsMaterial2D physicsMaterial;

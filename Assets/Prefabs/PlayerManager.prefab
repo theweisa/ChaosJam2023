@@ -141,6 +141,7 @@ MonoBehaviour:
   stopVelocity: 1
   stopDuration: 2.3
   stopTimer: 0
+  lifespan: 10
   playerStartPosition: {fileID: 7624865011558183808}
   playerEndPosition: {fileID: 7232190215270874966}
 --- !u!1 &4491240036671538166
@@ -257,10 +258,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tail
       objectReference: {fileID: 0}
+    - target: {fileID: 2574366535059630422, guid: aef7b4d92e091444b9c579466f7e3a31, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3839517238776556560, guid: aef7b4d92e091444b9c579466f7e3a31, type: 3}
       propertyPath: joint
       value: 
       objectReference: {fileID: 4457472333924074563}
+    - target: {fileID: 3839517238776556560, guid: aef7b4d92e091444b9c579466f7e3a31, type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6535251338908493245, guid: aef7b4d92e091444b9c579466f7e3a31, type: 3}
       propertyPath: m_Enabled
       value: 1
