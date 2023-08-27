@@ -177,6 +177,7 @@ public class Breakable : MonoBehaviour
 
         var txt = Instantiate(GameManager.Instance.damageText, collision.contacts[0].point, Quaternion.identity);
         txt.GetComponent<DamageText>().Init(impulse);
+        GameManager.Instance.AddPoints((int)impulse);
         float shakeStr = Global.Map(impulse, 0f, 1000f, 0f, 130f);
         float freq = Global.Map(impulse, 0f, 1000f, 0f, 75f);
         if (shakeStr > 10f) {

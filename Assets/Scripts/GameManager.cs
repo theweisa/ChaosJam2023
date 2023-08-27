@@ -18,6 +18,8 @@ public class GameManager : UnitySingleton<GameManager>
     public GameObject damageText;
     public bool isPaused = false;
     public int musicProgression;
+    public int throwsTaken = 0;
+    public int totalDamage = 0;
     private EventInstance levelAmbience;
     private EventInstance levelMusic;
     /*
@@ -98,6 +100,7 @@ public class GameManager : UnitySingleton<GameManager>
     }
 
     public void InitThrowing() {
+        throwsTaken++;
         gameState = GameState.Throwing;
     }
 
@@ -167,5 +170,11 @@ public class GameManager : UnitySingleton<GameManager>
             Instantiate(goalIndicator, new Vector3(grateController.gameObject.transform.position.x - 10f, grateController.gameObject.transform.position.y, 0), Quaternion.identity);
             showIndicator = true;
         }
+    }
+
+    public void AddPoints(int val)
+    {
+        totalDamage += val;
+        UIManager.Instance.gameUI.SetPointsText(totalDamage);
     }
 }
