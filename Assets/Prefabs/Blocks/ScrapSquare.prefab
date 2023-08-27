@@ -80,6 +80,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScrapSquare
       objectReference: {fileID: 0}
+    - target: {fileID: 8892073931402464770, guid: 0670f3ba8ef5e2c42b66343d1fbf443d, type: 3}
+      propertyPath: m_TagString
+      value: Scrap
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
