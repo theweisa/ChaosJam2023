@@ -91,8 +91,8 @@ public class PlayerManager : UnitySingleton<PlayerManager>
     }
 
     public IEnumerator PickUpRat() {
-        ratSpinning = AudioManager.instance.CreateEventInstance(FMODEventRef.instance.RatSwinging);
-        ratSpinning.start();
+        ratFlying.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        ratFlying.release();
         Rigidbody2D tailRb = tail.GetComponent<Rigidbody2D>();
         Vector2 tailPos = currentRat.GetComponent<RatController>().tailSprite.transform.position;
         claw.SetActive(true);
@@ -125,8 +125,8 @@ public class PlayerManager : UnitySingleton<PlayerManager>
     }
 
     public IEnumerator ResetRat(bool start=false) {
-        ratFlying.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        ratFlying.release();
+        ratSpinning = AudioManager.instance.CreateEventInstance(FMODEventRef.instance.RatSwinging);
+        ratSpinning.start();
         stopTimer = 0f;
         lifespanTimer = 0f;
         tail.GetComponent<LineRenderer>().enabled = true;
