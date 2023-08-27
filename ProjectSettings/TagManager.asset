@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - MasterRat
+  - Wall
+  - Glass
+  - Cardboard
+  - Scrap
+  - Chain
   layers:
   - Default
   - TransparentFX
@@ -14,7 +19,7 @@ TagManager:
   - UI
   - FreeRat
   - AttachedRat
-  - 
+  - Walls
   - 
   - 
   - 
