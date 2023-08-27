@@ -254,6 +254,14 @@ PrefabInstance:
       propertyPath: joint
       value: 
       objectReference: {fileID: 4457472333924074563}
+    - target: {fileID: 6535251338908493245, guid: aef7b4d92e091444b9c579466f7e3a31, type: 3}
+      propertyPath: m_Radius
+      value: 0.91304386
+      objectReference: {fileID: 0}
+    - target: {fileID: 6535251338908493245, guid: aef7b4d92e091444b9c579466f7e3a31, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.010074079
+      objectReference: {fileID: 0}
     - target: {fileID: 8161609045796073033, guid: aef7b4d92e091444b9c579466f7e3a31, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
