@@ -17,6 +17,7 @@ public class PlayerManager : UnitySingleton<PlayerManager>
     private float lifespanTimer = 0f;
     private EventInstance ratFlying;
     private EventInstance ratSpinning;
+    public int ratAttachCombo;
     public Transform playerStartPosition, playerEndPosition;
     // Start is called before the first frame update
     public override void Awake()
@@ -127,6 +128,7 @@ public class PlayerManager : UnitySingleton<PlayerManager>
     public IEnumerator ResetRat(bool start=false) {
         ratSpinning = AudioManager.instance.CreateEventInstance(FMODEventRef.instance.RatSwinging);
         ratSpinning.start();
+        ratAttachCombo = 0;
         stopTimer = 0f;
         lifespanTimer = 0f;
         tail.GetComponent<LineRenderer>().enabled = true;
