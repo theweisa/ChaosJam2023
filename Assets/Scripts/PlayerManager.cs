@@ -16,6 +16,7 @@ public class PlayerManager : UnitySingleton<PlayerManager>
     public float lifespan = 10f;
     private float lifespanTimer = 0f;
     private EventInstance ratFlying;
+    private EventInstance ratSpinning;
     public Transform playerStartPosition, playerEndPosition;
     // Start is called before the first frame update
     public override void Awake()
@@ -68,6 +69,9 @@ public class PlayerManager : UnitySingleton<PlayerManager>
         ratFlying = AudioManager.instance.CreateEventInstance(FMODEventRef.instance.RatFlying);
         ratFlying.setParameterByName("RatFlightTime", 0);
         currentRat.GetComponent<RatController>().ratFlightTime = 0;
+        FMODUnity.RuntimeManager.PlayOneShot(FMODEventRef.instance.RatRelease);
+        ratSpinning.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        ratSpinning.release();
         ratFlying.start();
 
         CameraManager.Instance.PanToCamera(CameraManager.Instance.collisionCamera);
@@ -87,6 +91,8 @@ public class PlayerManager : UnitySingleton<PlayerManager>
     }
 
     public IEnumerator PickUpRat() {
+        ratSpinning = AudioManager.instance.CreateEventInstance(FMODEventRef.instance.RatSwinging);
+        ratSpinning.start();
         Rigidbody2D tailRb = tail.GetComponent<Rigidbody2D>();
         Vector2 tailPos = currentRat.GetComponent<RatController>().tailSprite.transform.position;
         claw.SetActive(true);

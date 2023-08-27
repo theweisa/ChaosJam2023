@@ -12,7 +12,8 @@ public class FMODEventRef : MonoBehaviour
     [field: Header("Whooshes")]
     [field: SerializeField] public EventReference RatFlying {get; private set;}
     [field: SerializeField] public EventReference RatSwinging {get; private set;}
-
+    [field: SerializeField] public EventReference RatRelease {get; private set;}
+    
     [field: Header("Music")]
     [field: SerializeField] public EventReference LevelMusic {get; private set;} 
 

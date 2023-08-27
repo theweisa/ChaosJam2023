@@ -584,6 +584,10 @@ PrefabInstance:
       value: event:/Music
       objectReference: {fileID: 0}
     - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
+      propertyPath: <RatRelease>k__BackingField.Path
+      value: event:/RatRelease
+      objectReference: {fileID: 0}
+    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
       propertyPath: <SewerAmbience>k__BackingField.Path
       value: event:/Ambience
       objectReference: {fileID: 0}
@@ -602,6 +606,22 @@ PrefabInstance:
     - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
       propertyPath: <LevelMusic>k__BackingField.Guid.Data4
       value: -1868678594
+      objectReference: {fileID: 0}
+    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
+      propertyPath: <RatRelease>k__BackingField.Guid.Data1
+      value: -1199738049
+      objectReference: {fileID: 0}
+    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
+      propertyPath: <RatRelease>k__BackingField.Guid.Data2
+      value: 1223984679
+      objectReference: {fileID: 0}
+    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
+      propertyPath: <RatRelease>k__BackingField.Guid.Data3
+      value: -1576482156
+      objectReference: {fileID: 0}
+    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
+      propertyPath: <RatRelease>k__BackingField.Guid.Data4
+      value: -689839590
       objectReference: {fileID: 0}
     - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
       propertyPath: <SewerAmbience>k__BackingField.Guid.Data1
@@ -854,7 +874,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3498778324980282531, guid: b9199e8a19e4aed4eb564311b9ca9b25, type: 3}
       propertyPath: m_DynamicOccludee
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5200174157778907182, guid: b9199e8a19e4aed4eb564311b9ca9b25, type: 3}
       propertyPath: m_Creator
@@ -902,7 +922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7809517911840063209, guid: b9199e8a19e4aed4eb564311b9ca9b25, type: 3}
       propertyPath: m_DynamicOccludee
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8206896644241836632, guid: b9199e8a19e4aed4eb564311b9ca9b25, type: 3}
       propertyPath: m_Creator

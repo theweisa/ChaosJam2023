@@ -117,10 +117,12 @@ public class RatController : MonoBehaviour
         {
             SetNewMasterRat(this);
         }
-        if (GameManager.Instance.gameState == GameManager.GameState.Thrown && masterRat == this) {
-                RuntimeManager.StudioSystem.setParameterByName("RatFlightTime", ratFlightTime);   
-                ratFlightTime += Time.deltaTime;                  
+        if(masterRat == this && GameManager.Instance.gameState == GameManager.GameState.Thrown){
+            RuntimeManager.StudioSystem.setParameterByName("RatFlightTime", ratFlightTime);   
+            ratFlightTime += Time.deltaTime;   
         }
+               
+
     }
 
     private void FixedUpdate()
@@ -131,7 +133,6 @@ public class RatController : MonoBehaviour
             if (masterRat == this)
             {
                 RuntimeManager.StudioSystem.setParameterByName("RatVelocity", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.magnitude));
-              
             }
         } 
     }
