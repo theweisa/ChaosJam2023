@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14662eaa5a48a0a41af4f0f946af0eab, type: 3}
-  m_Name: Cardboard
+  m_Name: Glass
   m_EditorClassIdentifier: 
-  id: 0
-  massCoefficient: 3
-  breakCoefficient: 17
-  physicsMaterial: {fileID: 6200000, guid: 3f7fc290d5e732948a794122a4b98832, type: 2}
-  damagedParticlePrefab: {fileID: 4162027394008824001, guid: b6d7e86ecb196d14a8046f7644e1136c, type: 3}
+  id: 1
+  massCoefficient: 1
+  breakCoefficient: 10
+  physicsMaterial: {fileID: 6200000, guid: 8a830b348a896854f9a05f5c7217d5a3, type: 2}
+  damagedParticlePrefab: {fileID: 4162027394008824001, guid: c6654b0b1d72b0c44aa7b3bf35a5ee27, type: 3}
