@@ -24,6 +24,7 @@ public class RatController : MonoBehaviour
 
 
 
+
     private void Start()
     {
         tailSprite.enabled = false;
@@ -93,6 +94,11 @@ public class RatController : MonoBehaviour
         */
 
         connectedRats.Add(rat);
+        if (GameManager.Instance.musicProgression < 7) //Music progression goes from 0-10, 0-8 are the regular loop
+        {
+            GameManager.Instance.musicProgression++;
+            RuntimeManager.StudioSystem.setParameterByName("RatProgression", GameManager.Instance.musicProgression);         
+        }
 
         if (tailTriggered && masterRat == this)
         {

@@ -579,6 +579,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
+      propertyPath: <LevelMusic>k__BackingField.Path
+      value: event:/Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
+      propertyPath: <SewerAmbience>k__BackingField.Path
+      value: event:/Ambience
+      objectReference: {fileID: 0}
+    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
+      propertyPath: <LevelMusic>k__BackingField.Guid.Data1
+      value: 600557571
+      objectReference: {fileID: 0}
+    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
+      propertyPath: <LevelMusic>k__BackingField.Guid.Data2
+      value: 1147277247
+      objectReference: {fileID: 0}
+    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
+      propertyPath: <LevelMusic>k__BackingField.Guid.Data3
+      value: 1499971511
+      objectReference: {fileID: 0}
+    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
+      propertyPath: <LevelMusic>k__BackingField.Guid.Data4
+      value: -1868678594
+      objectReference: {fileID: 0}
+    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
+      propertyPath: <SewerAmbience>k__BackingField.Guid.Data1
+      value: 691684989
+      objectReference: {fileID: 0}
+    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
+      propertyPath: <SewerAmbience>k__BackingField.Guid.Data2
+      value: 1179884256
+      objectReference: {fileID: 0}
+    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
+      propertyPath: <SewerAmbience>k__BackingField.Guid.Data3
+      value: 879531438
+      objectReference: {fileID: 0}
+    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
+      propertyPath: <SewerAmbience>k__BackingField.Guid.Data4
+      value: -506463855
+      objectReference: {fileID: 0}
     - target: {fileID: 7852695232636529617, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.00295
@@ -678,7 +718,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4621960957062644738, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.228432
+      value: -12.4891205
+      objectReference: {fileID: 0}
+    - target: {fileID: 4621960957062644738, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000019073486
       objectReference: {fileID: 0}
     - target: {fileID: 4621960957062644738, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -878,7 +922,6 @@ SceneRoots:
   - {fileID: 6407296261559552598}
   - {fileID: 4611476023236210430}
   - {fileID: 1093467988}
-  - {fileID: 1756094661275680311}
   - {fileID: 8801588906396759029}
   - {fileID: 5299649220417181885}
   - {fileID: 1603633333}

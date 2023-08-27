@@ -13,6 +13,12 @@ public class FMODEventRef : MonoBehaviour
     [field: SerializeField] public EventReference RatFlying {get; private set;}
     [field: SerializeField] public EventReference RatSwinging {get; private set;}
 
+    [field: Header("Music")]
+    [field: SerializeField] public EventReference LevelMusic {get; private set;} 
+
+    [field: Header ("Other SFX")]
+    [field: SerializeField] public EventReference SewerAmbience {get; private set;}
+
     public static FMODEventRef instance {get; private set;}
 
     private void Awake()
