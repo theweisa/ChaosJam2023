@@ -220,7 +220,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3609269172169767152, guid: 5d694082e046e3e47821d00227de1d1f, type: 3}
       propertyPath: levelToLoad
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3609269172169767152, guid: 5d694082e046e3e47821d00227de1d1f, type: 3}
       propertyPath: currentLevel
@@ -626,7 +626,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4621960957062644738, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.228432
+      value: -16.236439
       objectReference: {fileID: 0}
     - target: {fileID: 4621960957062644738, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
       propertyPath: m_LocalPosition.z
