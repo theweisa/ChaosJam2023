@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: scrap
   massCoefficient: 10
-  breakCoefficient: 50
+  breakCoefficient: 35
   physicsMaterial: {fileID: 6200000, guid: f094bb4902b047f49a7d7f21f192c2b8, type: 2}
