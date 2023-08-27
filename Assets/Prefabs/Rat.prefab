@@ -104,7 +104,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 9.111884
+  m_Mass: 3.0372949
   m_LinearDrag: 0.12
   m_AngularDrag: 0.7
   m_GravityScale: 1
@@ -233,7 +233,6 @@ GameObject:
   - component: {fileID: 2771162267197317118}
   - component: {fileID: 3962169369033983952}
   - component: {fileID: 8819457666672123480}
-  - component: {fileID: 6962302183580815862}
   m_Layer: 0
   m_Name: TailTriggerZone
   m_TagString: Untagged
@@ -304,34 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hostRat: {fileID: 859738329878234987}
-  rb: {fileID: 6962302183580815862}
---- !u!50 &6962302183580815862
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6478172036966008365}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  rb: {fileID: 0}
 --- !u!1 &7306413308352298587
 GameObject:
   m_ObjectHideFlags: 0

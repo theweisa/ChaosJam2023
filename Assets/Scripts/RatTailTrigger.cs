@@ -16,9 +16,9 @@ public class RatTailTrigger : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        ContactPoint2D[] contacts = new ContactPoint2D[1];
+        //ContactPoint2D[] contacts = new ContactPoint2D[1];
         
-        if (hostRat && rb.GetContacts(contacts) == 0)
+        if (hostRat)
         {
             hostRat.tailTriggered = false;
         }
