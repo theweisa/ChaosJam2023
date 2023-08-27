@@ -189,17 +189,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: CardboardRectangle
       objectReference: {fileID: 0}
+    - target: {fileID: 4738904912274270972, guid: c44f94aede82164438dba42b76c07f75, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 5.7961044
+      objectReference: {fileID: 0}
     - target: {fileID: 6561895246053603320, guid: c44f94aede82164438dba42b76c07f75, type: 3}
       propertyPath: mass
-      value: 29.900166
+      value: 43.326122
       objectReference: {fileID: 0}
     - target: {fileID: 6561895246053603320, guid: c44f94aede82164438dba42b76c07f75, type: 3}
       propertyPath: breakCoefficient
-      value: 598.0033
+      value: 866.52246
       objectReference: {fileID: 0}
     - target: {fileID: 6561895246053603320, guid: c44f94aede82164438dba42b76c07f75, type: 3}
       propertyPath: currentBreakHealth
-      value: 598.0033
+      value: 866.52246
       objectReference: {fileID: 0}
     - target: {fileID: 7451500564604159697, guid: c44f94aede82164438dba42b76c07f75, type: 3}
       propertyPath: m_Mass
@@ -388,7 +392,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1325554087044427069, guid: d52cc823b995f89449b207362647bbd1, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 5.04
+      value: 5.0335007
       objectReference: {fileID: 0}
     - target: {fileID: 2073465736676523306, guid: d52cc823b995f89449b207362647bbd1, type: 3}
       propertyPath: m_Size.y
@@ -452,15 +456,15 @@ PrefabInstance:
       objectReference: {fileID: 6200000, guid: f094bb4902b047f49a7d7f21f192c2b8, type: 2}
     - target: {fileID: 8489007292460285121, guid: d52cc823b995f89449b207362647bbd1, type: 3}
       propertyPath: mass
-      value: 10
+      value: 250.83748
       objectReference: {fileID: 0}
     - target: {fileID: 8489007292460285121, guid: d52cc823b995f89449b207362647bbd1, type: 3}
       propertyPath: breakCoefficient
-      value: 500
+      value: 8779.312
       objectReference: {fileID: 0}
     - target: {fileID: 8489007292460285121, guid: d52cc823b995f89449b207362647bbd1, type: 3}
       propertyPath: currentBreakHealth
-      value: 500
+      value: 8779.312
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3164892558743598539, guid: d52cc823b995f89449b207362647bbd1, type: 3}
@@ -525,6 +529,107 @@ BoxCollider2D:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2556208485431124936, guid: d52cc823b995f89449b207362647bbd1, type: 3}
   m_PrefabInstance: {fileID: 157506091}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &173220794
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1236563073}
+    m_Modifications:
+    - target: {fileID: 8000925511524707, guid: b4501178d8147344cb6450255424fc86, type: 3}
+      propertyPath: m_Mass
+      value: 69.8696
+      objectReference: {fileID: 0}
+    - target: {fileID: 8000925511524707, guid: b4501178d8147344cb6450255424fc86, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 3f7fc290d5e732948a794122a4b98832, type: 2}
+    - target: {fileID: 4352140190114828362, guid: b4501178d8147344cb6450255424fc86, type: 3}
+      propertyPath: mass
+      value: 69.8696
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352140190114828362, guid: b4501178d8147344cb6450255424fc86, type: 3}
+      propertyPath: breakCoefficient
+      value: 1397.392
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352140190114828362, guid: b4501178d8147344cb6450255424fc86, type: 3}
+      propertyPath: currentBreakHealth
+      value: 1397.392
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064667135256322944, guid: b4501178d8147344cb6450255424fc86, type: 3}
+      propertyPath: m_Name
+      value: CardboardSquare
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155441353485013409, guid: b4501178d8147344cb6450255424fc86, type: 3}
+      propertyPath: m_Size.x
+      value: 2.734528
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155441353485013409, guid: b4501178d8147344cb6450255424fc86, type: 3}
+      propertyPath: m_Size.y
+      value: 2.734528
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079973443156121920, guid: b4501178d8147344cb6450255424fc86, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 2.734528
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079973443156121920, guid: b4501178d8147344cb6450255424fc86, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 2.734528
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697655912156319555, guid: b4501178d8147344cb6450255424fc86, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.570002
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697655912156319555, guid: b4501178d8147344cb6450255424fc86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697655912156319555, guid: b4501178d8147344cb6450255424fc86, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697655912156319555, guid: b4501178d8147344cb6450255424fc86, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697655912156319555, guid: b4501178d8147344cb6450255424fc86, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697655912156319555, guid: b4501178d8147344cb6450255424fc86, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697655912156319555, guid: b4501178d8147344cb6450255424fc86, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697655912156319555, guid: b4501178d8147344cb6450255424fc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697655912156319555, guid: b4501178d8147344cb6450255424fc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697655912156319555, guid: b4501178d8147344cb6450255424fc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6064667135256322944, guid: b4501178d8147344cb6450255424fc86, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 585076017}
+  m_SourcePrefab: {fileID: 100100000, guid: b4501178d8147344cb6450255424fc86, type: 3}
+--- !u!4 &173220795 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7697655912156319555, guid: b4501178d8147344cb6450255424fc86, type: 3}
+  m_PrefabInstance: {fileID: 173220794}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &175708610 stripped
 Transform:
@@ -702,6 +807,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fa1c8ce1583bf640be2a1e21e5dc1eb, type: 3}
+--- !u!50 &223882807 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 4439321135339916081, guid: f3e4e0ce7394c334283e8dce8a257634, type: 3}
+  m_PrefabInstance: {fileID: 1810634536840423107}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &251123567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -769,6 +879,26 @@ PrefabInstance:
     - target: {fileID: 3701789726275519538, guid: c44f94aede82164438dba42b76c07f75, type: 3}
       propertyPath: m_Name
       value: CardboardRectangle (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738904912274270972, guid: c44f94aede82164438dba42b76c07f75, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.79999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738904912274270972, guid: c44f94aede82164438dba42b76c07f75, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 5.4919934
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561895246053603320, guid: c44f94aede82164438dba42b76c07f75, type: 3}
+      propertyPath: mass
+      value: 41.052868
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561895246053603320, guid: c44f94aede82164438dba42b76c07f75, type: 3}
+      propertyPath: breakCoefficient
+      value: 821.0574
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561895246053603320, guid: c44f94aede82164438dba42b76c07f75, type: 3}
+      propertyPath: currentBreakHealth
+      value: 821.0574
       objectReference: {fileID: 0}
     - target: {fileID: 7451500564604159697, guid: c44f94aede82164438dba42b76c07f75, type: 3}
       propertyPath: m_Mass
@@ -838,6 +968,18 @@ PrefabInstance:
     - target: {fileID: 3701789726275519538, guid: c44f94aede82164438dba42b76c07f75, type: 3}
       propertyPath: m_Name
       value: CardboardRectangle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561895246053603320, guid: c44f94aede82164438dba42b76c07f75, type: 3}
+      propertyPath: mass
+      value: 29.900158
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561895246053603320, guid: c44f94aede82164438dba42b76c07f75, type: 3}
+      propertyPath: breakCoefficient
+      value: 598.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561895246053603320, guid: c44f94aede82164438dba42b76c07f75, type: 3}
+      propertyPath: currentBreakHealth
+      value: 598.0032
       objectReference: {fileID: 0}
     - target: {fileID: 7451500564604159697, guid: c44f94aede82164438dba42b76c07f75, type: 3}
       propertyPath: m_Mass
@@ -1007,15 +1149,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1045099166619260909, guid: 07c22cff6940a0044813978110d9a0a7, type: 3}
       propertyPath: mass
-      value: 3.303033
+      value: 6.04981
       objectReference: {fileID: 0}
     - target: {fileID: 1045099166619260909, guid: 07c22cff6940a0044813978110d9a0a7, type: 3}
       propertyPath: breakCoefficient
-      value: 33.03033
+      value: 60.4981
       objectReference: {fileID: 0}
     - target: {fileID: 1045099166619260909, guid: 07c22cff6940a0044813978110d9a0a7, type: 3}
       propertyPath: currentBreakHealth
-      value: 33.03033
+      value: 60.4981
       objectReference: {fileID: 0}
     - target: {fileID: 3673095179023558340, guid: 07c22cff6940a0044813978110d9a0a7, type: 3}
       propertyPath: m_Mass
@@ -1025,6 +1167,14 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 8a830b348a896854f9a05f5c7217d5a3, type: 2}
+    - target: {fileID: 5810776032585588455, guid: 07c22cff6940a0044813978110d9a0a7, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1.3638449
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810776032585588455, guid: 07c22cff6940a0044813978110d9a0a7, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1.3638449
+      objectReference: {fileID: 0}
     - target: {fileID: 6356418637675907300, guid: 07c22cff6940a0044813978110d9a0a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.7599993
@@ -1209,6 +1359,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: CardboardRectangle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6561895246053603320, guid: c44f94aede82164438dba42b76c07f75, type: 3}
+      propertyPath: mass
+      value: 29.900158
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561895246053603320, guid: c44f94aede82164438dba42b76c07f75, type: 3}
+      propertyPath: breakCoefficient
+      value: 598.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561895246053603320, guid: c44f94aede82164438dba42b76c07f75, type: 3}
+      propertyPath: currentBreakHealth
+      value: 598.0032
+      objectReference: {fileID: 0}
     - target: {fileID: 7451500564604159697, guid: c44f94aede82164438dba42b76c07f75, type: 3}
       propertyPath: m_Mass
       value: 29.900158
@@ -1218,6 +1380,36 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c44f94aede82164438dba42b76c07f75, type: 3}
+--- !u!1 &585076016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6064667135256322944, guid: b4501178d8147344cb6450255424fc86, type: 3}
+  m_PrefabInstance: {fileID: 173220794}
+  m_PrefabAsset: {fileID: 0}
+--- !u!233 &585076017
+HingeJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585076016}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 223882807}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 1.71}
+  m_ConnectedAnchor: {x: 0.067105226, y: -0.16}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
 --- !u!1001 &600570162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1295,15 +1487,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 182707135912967894, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
       propertyPath: mass
-      value: 1
+      value: 20.92999
       objectReference: {fileID: 0}
     - target: {fileID: 182707135912967894, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
       propertyPath: breakCoefficient
-      value: 10
+      value: 209.29991
       objectReference: {fileID: 0}
     - target: {fileID: 182707135912967894, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
       propertyPath: currentBreakHealth
-      value: 10
+      value: 209.29991
+      objectReference: {fileID: 0}
+    - target: {fileID: 1258672796261899429, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 4.199975
       objectReference: {fileID: 0}
     - target: {fileID: 4535300270158417919, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
       propertyPath: m_Mass
@@ -1435,6 +1631,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1236563073}
     m_Modifications:
+    - target: {fileID: 1325554087044427069, guid: d52cc823b995f89449b207362647bbd1, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.79999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325554087044427069, guid: d52cc823b995f89449b207362647bbd1, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 9.3868475
+      objectReference: {fileID: 0}
     - target: {fileID: 2073465736676523306, guid: d52cc823b995f89449b207362647bbd1, type: 3}
       propertyPath: m_Size.x
       value: 0.79999995
@@ -1501,15 +1705,15 @@ PrefabInstance:
       objectReference: {fileID: 6200000, guid: f094bb4902b047f49a7d7f21f192c2b8, type: 2}
     - target: {fileID: 8489007292460285121, guid: d52cc823b995f89449b207362647bbd1, type: 3}
       propertyPath: mass
-      value: 49.475143
+      value: 233.8902
       objectReference: {fileID: 0}
     - target: {fileID: 8489007292460285121, guid: d52cc823b995f89449b207362647bbd1, type: 3}
       propertyPath: breakCoefficient
-      value: 2473.757
+      value: 8186.1567
       objectReference: {fileID: 0}
     - target: {fileID: 8489007292460285121, guid: d52cc823b995f89449b207362647bbd1, type: 3}
       propertyPath: currentBreakHealth
-      value: 2473.757
+      value: 8186.1567
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1580,17 +1784,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: CardboardRectangle (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4738904912274270972, guid: c44f94aede82164438dba42b76c07f75, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6561895246053603320, guid: c44f94aede82164438dba42b76c07f75, type: 3}
       propertyPath: mass
-      value: 29.900166
+      value: 37.375206
       objectReference: {fileID: 0}
     - target: {fileID: 6561895246053603320, guid: c44f94aede82164438dba42b76c07f75, type: 3}
       propertyPath: breakCoefficient
-      value: 598.0033
+      value: 747.50415
       objectReference: {fileID: 0}
     - target: {fileID: 6561895246053603320, guid: c44f94aede82164438dba42b76c07f75, type: 3}
       propertyPath: currentBreakHealth
-      value: 598.0033
+      value: 747.50415
       objectReference: {fileID: 0}
     - target: {fileID: 7451500564604159697, guid: c44f94aede82164438dba42b76c07f75, type: 3}
       propertyPath: m_Mass
@@ -1681,6 +1889,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1236563073}
     m_Modifications:
+    - target: {fileID: 182707135912967894, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
+      propertyPath: mass
+      value: 13.909772
+      objectReference: {fileID: 0}
+    - target: {fileID: 182707135912967894, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
+      propertyPath: breakCoefficient
+      value: 139.09772
+      objectReference: {fileID: 0}
+    - target: {fileID: 182707135912967894, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
+      propertyPath: currentBreakHealth
+      value: 139.09772
+      objectReference: {fileID: 0}
     - target: {fileID: 1258672796261899429, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.y
       value: 5.5824866
@@ -1755,6 +1975,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1236563073}
     m_Modifications:
+    - target: {fileID: 182707135912967894, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
+      propertyPath: mass
+      value: 4.008633
+      objectReference: {fileID: 0}
+    - target: {fileID: 182707135912967894, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
+      propertyPath: breakCoefficient
+      value: 40.08633
+      objectReference: {fileID: 0}
+    - target: {fileID: 182707135912967894, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
+      propertyPath: currentBreakHealth
+      value: 40.08633
+      objectReference: {fileID: 0}
+    - target: {fileID: 1258672796261899429, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1.6088073
+      objectReference: {fileID: 0}
     - target: {fileID: 4535300270158417919, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
       propertyPath: m_Mass
       value: 4.008633
@@ -1820,6 +2056,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1236563073}
     m_Modifications:
+    - target: {fileID: 182707135912967894, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
+      propertyPath: mass
+      value: 9.9667225
+      objectReference: {fileID: 0}
+    - target: {fileID: 182707135912967894, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
+      propertyPath: breakCoefficient
+      value: 99.66722
+      objectReference: {fileID: 0}
+    - target: {fileID: 182707135912967894, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
+      propertyPath: currentBreakHealth
+      value: 99.66722
+      objectReference: {fileID: 0}
     - target: {fileID: 4535300270158417919, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
       propertyPath: m_Mass
       value: 9.9667225
@@ -2008,15 +2256,15 @@ PrefabInstance:
       objectReference: {fileID: 6200000, guid: f094bb4902b047f49a7d7f21f192c2b8, type: 2}
     - target: {fileID: 8489007292460285121, guid: d52cc823b995f89449b207362647bbd1, type: 3}
       propertyPath: mass
-      value: 10
+      value: 299.00165
       objectReference: {fileID: 0}
     - target: {fileID: 8489007292460285121, guid: d52cc823b995f89449b207362647bbd1, type: 3}
       propertyPath: breakCoefficient
-      value: 500
+      value: 10465.058
       objectReference: {fileID: 0}
     - target: {fileID: 8489007292460285121, guid: d52cc823b995f89449b207362647bbd1, type: 3}
       propertyPath: currentBreakHealth
-      value: 500
+      value: 10465.058
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3164892558743598539, guid: d52cc823b995f89449b207362647bbd1, type: 3}
@@ -2273,6 +2521,8 @@ Transform:
   - {fileID: 1744860187}
   - {fileID: 102853787}
   - {fileID: 13528932}
+  - {fileID: 1810634536840423108}
+  - {fileID: 173220795}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1236563074
@@ -2363,6 +2613,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChainBlockExample
       objectReference: {fileID: 0}
+    - target: {fileID: 5047848791961350444, guid: c32efc821de9aaa4bbc97a5acb717e40, type: 3}
+      propertyPath: mass
+      value: 41.476612
+      objectReference: {fileID: 0}
+    - target: {fileID: 5047848791961350444, guid: c32efc821de9aaa4bbc97a5acb717e40, type: 3}
+      propertyPath: breakCoefficient
+      value: 829.5322
+      objectReference: {fileID: 0}
+    - target: {fileID: 5047848791961350444, guid: c32efc821de9aaa4bbc97a5acb717e40, type: 3}
+      propertyPath: currentBreakHealth
+      value: 829.5322
+      objectReference: {fileID: 0}
     - target: {fileID: 6103358779708226656, guid: c32efc821de9aaa4bbc97a5acb717e40, type: 3}
       propertyPath: m_Anchor.x
       value: 1.2999992
@@ -2371,12 +2633,17 @@ PrefabInstance:
       propertyPath: m_Anchor.y
       value: -4.3779507
       objectReference: {fileID: 0}
+    - target: {fileID: 6103358779708226656, guid: c32efc821de9aaa4bbc97a5acb717e40, type: 3}
+      propertyPath: m_ConnectedRigidBody
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8823689691703164933, guid: c32efc821de9aaa4bbc97a5acb717e40, type: 3}
       propertyPath: m_Mass
       value: 41.476612
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3333333783531422438, guid: c32efc821de9aaa4bbc97a5acb717e40, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c32efc821de9aaa4bbc97a5acb717e40, type: 3}
@@ -2546,15 +2813,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6561895246053603320, guid: c44f94aede82164438dba42b76c07f75, type: 3}
       propertyPath: mass
-      value: 29.900166
+      value: 44.994473
       objectReference: {fileID: 0}
     - target: {fileID: 6561895246053603320, guid: c44f94aede82164438dba42b76c07f75, type: 3}
       propertyPath: breakCoefficient
-      value: 598.0033
+      value: 899.88947
       objectReference: {fileID: 0}
     - target: {fileID: 6561895246053603320, guid: c44f94aede82164438dba42b76c07f75, type: 3}
       propertyPath: currentBreakHealth
-      value: 598.0033
+      value: 899.88947
       objectReference: {fileID: 0}
     - target: {fileID: 7451500564604159697, guid: c44f94aede82164438dba42b76c07f75, type: 3}
       propertyPath: m_Mass
@@ -2638,6 +2905,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1236563073}
     m_Modifications:
+    - target: {fileID: 182707135912967894, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
+      propertyPath: mass
+      value: 12.957079
+      objectReference: {fileID: 0}
+    - target: {fileID: 182707135912967894, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
+      propertyPath: breakCoefficient
+      value: 129.57079
+      objectReference: {fileID: 0}
+    - target: {fileID: 182707135912967894, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
+      propertyPath: currentBreakHealth
+      value: 129.57079
+      objectReference: {fileID: 0}
     - target: {fileID: 1258672796261899429, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.y
       value: 5.2001367
@@ -2836,6 +3115,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1236563073}
     m_Modifications:
+    - target: {fileID: 182707135912967894, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
+      propertyPath: mass
+      value: 11.525993
+      objectReference: {fileID: 0}
+    - target: {fileID: 182707135912967894, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
+      propertyPath: breakCoefficient
+      value: 115.25993
+      objectReference: {fileID: 0}
+    - target: {fileID: 182707135912967894, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
+      propertyPath: currentBreakHealth
+      value: 115.25993
+      objectReference: {fileID: 0}
+    - target: {fileID: 1258672796261899429, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 4.6257915
+      objectReference: {fileID: 0}
     - target: {fileID: 4535300270158417919, guid: f401285b9018f9c41b2f3ba6f1838a14, type: 3}
       propertyPath: m_Mass
       value: 11.525993
@@ -3051,11 +3346,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7580050985035309851, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.970041
+      value: -15.45
       objectReference: {fileID: 0}
     - target: {fileID: 7580050985035309851, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.341467
+      value: 17.9
       objectReference: {fileID: 0}
     - target: {fileID: 7580050985035309851, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3209,15 +3504,15 @@ PrefabInstance:
       objectReference: {fileID: 6200000, guid: 3f7fc290d5e732948a794122a4b98832, type: 2}
     - target: {fileID: 4352140190114828362, guid: b4501178d8147344cb6450255424fc86, type: 3}
       propertyPath: mass
-      value: 9.3438
+      value: 57.665802
       objectReference: {fileID: 0}
     - target: {fileID: 4352140190114828362, guid: b4501178d8147344cb6450255424fc86, type: 3}
       propertyPath: breakCoefficient
-      value: 186.87599
+      value: 1153.316
       objectReference: {fileID: 0}
     - target: {fileID: 4352140190114828362, guid: b4501178d8147344cb6450255424fc86, type: 3}
       propertyPath: currentBreakHealth
-      value: 186.87599
+      value: 1153.316
       objectReference: {fileID: 0}
     - target: {fileID: 6064667135256322944, guid: b4501178d8147344cb6450255424fc86, type: 3}
       propertyPath: m_Name
@@ -3307,15 +3602,15 @@ PrefabInstance:
       objectReference: {fileID: 6200000, guid: 3f7fc290d5e732948a794122a4b98832, type: 2}
     - target: {fileID: 4352140190114828362, guid: b4501178d8147344cb6450255424fc86, type: 3}
       propertyPath: mass
-      value: 9.3438
+      value: 86.32564
       objectReference: {fileID: 0}
     - target: {fileID: 4352140190114828362, guid: b4501178d8147344cb6450255424fc86, type: 3}
       propertyPath: breakCoefficient
-      value: 186.87599
+      value: 1726.5127
       objectReference: {fileID: 0}
     - target: {fileID: 4352140190114828362, guid: b4501178d8147344cb6450255424fc86, type: 3}
       propertyPath: currentBreakHealth
-      value: 186.87599
+      value: 1726.5127
       objectReference: {fileID: 0}
     - target: {fileID: 6064667135256322944, guid: b4501178d8147344cb6450255424fc86, type: 3}
       propertyPath: m_Name
@@ -3444,6 +3739,68 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
+--- !u!1001 &1810634536840423107
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1236563073}
+    m_Modifications:
+    - target: {fileID: 7939078057539632406, guid: f3e4e0ce7394c334283e8dce8a257634, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.570002
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939078057539632406, guid: f3e4e0ce7394c334283e8dce8a257634, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 19.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939078057539632406, guid: f3e4e0ce7394c334283e8dce8a257634, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939078057539632406, guid: f3e4e0ce7394c334283e8dce8a257634, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939078057539632406, guid: f3e4e0ce7394c334283e8dce8a257634, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939078057539632406, guid: f3e4e0ce7394c334283e8dce8a257634, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939078057539632406, guid: f3e4e0ce7394c334283e8dce8a257634, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939078057539632406, guid: f3e4e0ce7394c334283e8dce8a257634, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939078057539632406, guid: f3e4e0ce7394c334283e8dce8a257634, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939078057539632406, guid: f3e4e0ce7394c334283e8dce8a257634, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117549227145803064, guid: f3e4e0ce7394c334283e8dce8a257634, type: 3}
+      propertyPath: m_Name
+      value: Chain
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f3e4e0ce7394c334283e8dce8a257634, type: 3}
+--- !u!4 &1810634536840423108 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7939078057539632406, guid: f3e4e0ce7394c334283e8dce8a257634, type: 3}
+  m_PrefabInstance: {fileID: 1810634536840423107}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
