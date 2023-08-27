@@ -29,4 +29,16 @@ public static class Global {
     {
         return (value - fromSource) / (toSource - fromSource) * (toTarget - fromTarget) + fromTarget;
     }
+    public static void FadeOut(SpriteRenderer sprite, float dur) {
+        Color currColor = sprite.color;
+        Color fadeColor = currColor;
+        fadeColor.a = 0;
+        LeanTween.value(sprite.gameObject, (Color val)=>{ sprite.color=val; }, currColor, fadeColor, dur).setEase(LeanTweenType.easeInExpo);
+    }
+    public static void FadeIn(SpriteRenderer sprite, float dur) {
+        Color currColor = sprite.color;
+        Color newColor = currColor;
+        newColor.a = 1;
+        LeanTween.value(sprite.gameObject, (Color val)=>{ sprite.color=val; }, currColor, newColor, dur).setEase(LeanTweenType.easeInExpo);
+    }
 }

@@ -17,7 +17,7 @@ public class SquashScript : MonoBehaviour
         turnTimer = 1f/(bpm/60f);
         baseScale = transform.localScale;
         //float squashInterval = 
-        LeanTween.scaleY(gameObject, baseScale.y*squashCoefficient, turnTimer*0.5f).setLoopPingPong().setEaseInQuart();
+        LeanTween.scaleY(gameObject, baseScale.y*squashCoefficient, turnTimer*0.5f).setLoopPingPong().setEaseInExpo();
         Rotate(left);
     }
 
