@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   massCoefficient: 10
-  breakCoefficient: 35
+  breakCoefficient: 25
   physicsMaterial: {fileID: 6200000, guid: f094bb4902b047f49a7d7f21f192c2b8, type: 2}

@@ -23,6 +23,15 @@ public class PlayerManager : UnitySingleton<PlayerManager>
         base.Awake();
         stopTimer = 0f;
         lifespanTimer = 0f;
+        if (RatController.connectedRats != null)
+        {
+            RatController.connectedRats.Clear();
+            if (RatController.masterRat)
+            {
+                RatController.connectedRats.Add(RatController.masterRat);
+            }
+
+        }
     }
 
     void Update() {
@@ -81,6 +90,9 @@ public class PlayerManager : UnitySingleton<PlayerManager>
         lifespanTimer = 0f;
         tail.GetComponent<LineRenderer>().enabled = true;
         currentRat.GetComponent<RatController>().tailSprite.enabled = false;
+
+        
+
         Rigidbody2D tailRb = tail.GetComponent<Rigidbody2D>();
         tailRb.velocity = Vector2.zero;
         tailRb.bodyType = RigidbodyType2D.Kinematic;

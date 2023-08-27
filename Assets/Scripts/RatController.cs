@@ -11,6 +11,7 @@ public class RatController : MonoBehaviour
     public static List<RatController> connectedRats = new List<RatController>();
     public SpringJoint2D joint;
     public SpriteRenderer tailSprite;
+    public GameObject stickyParticlePrefab;
     public Vector3 preVelocity = Vector3.zero;
 
     public float ratFlightTime;
@@ -74,6 +75,9 @@ public class RatController : MonoBehaviour
     {
         rat.transform.parent = transform;
         rat.GetComponent<Rigidbody2D>().sharedMaterial = PlayerManager.Instance.ratMaterial;
+
+        var sticky = Instantiate(stickyParticlePrefab, contactPoint.point, Quaternion.identity);
+        sticky.transform.parent = transform;
 
         /*
         FixedJoint2D newJoint = gameObject.AddComponent<FixedJoint2D>();
