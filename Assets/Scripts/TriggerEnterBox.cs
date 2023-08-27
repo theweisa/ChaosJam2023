@@ -6,6 +6,7 @@ public class TriggerEnterBox : MonoBehaviour
 {
     public enum WallType { Top, Left };
     public Collider2D leftWall, topWall;
+    public Transform grate;
     // Start is called before the first frame update
     void OnTriggerEnter2D(Collider2D coll) {
         if (coll.gameObject.tag != "Player") return;

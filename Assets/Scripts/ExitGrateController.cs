@@ -14,6 +14,7 @@ public class ExitGrateController : MonoBehaviour
         if (rat && rat.isAttached)
         {
             int totalRats = FindObjectsOfType<RatController>().Length;
+            Debug.Log(totalRats);
 
             if (RatController.connectedRats.Count > requiredRatPercentage * totalRats)
             {

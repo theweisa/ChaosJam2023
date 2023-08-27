@@ -11,6 +11,8 @@ public class GameManager : UnitySingleton<GameManager>
     public GameObject goalIndicator;
     private bool showIndicator = false;
     public TriggerEnterBox levelWalls;
+    public PolygonCollider2D cameraConfines;
+    public Transform collisionCameraPos;
     public GameObject damageText;
     public bool isPaused = false;
     /*
@@ -51,6 +53,19 @@ public class GameManager : UnitySingleton<GameManager>
 
     public IEnumerator StartLevel() {
         gameState = GameState.Start;
+        collisionCameraPos.transform.position = new Vector2(levelWalls.grate.position.x, collisionCameraPos.transform.position.y);
+        CameraManager.Instance.initialCollisionCamera.transform.position = new Vector3(levelWalls.grate.position.x, collisionCameraPos.transform.position.y, CameraManager.Instance.initialCollisionCamera.transform.position.z);
+        Debug.Log(cameraConfines.points.Length);
+        Vector2[] newPoints = new Vector2[cameraConfines.points.Length];
+        System.Array.Copy(cameraConfines.points, newPoints, cameraConfines.points.Length);
+        for (int i = 0; i < newPoints.Length; i++) {
+            if (newPoints[i].x > 0) {
+                newPoints[i] = new Vector2(levelWalls.grate.position.x, newPoints[i].y);
+                //cameraConfines.points[i].x = levelWalls.grate.position.x;
+            }
+        }
+        cameraConfines.SetPath(0, newPoints);
+        
         yield return PlayerManager.Instance.ResetRat(true);
         
         // claw machine comes down with mouse
@@ -84,7 +99,10 @@ public class GameManager : UnitySingleton<GameManager>
     {
         yield return null;
         TogglePause(false);
-        Time.timeScale = 0;
+        CameraManager.Instance.PanToCamera(CameraManager.Instance.winCamera);
+        RatController.masterRat.GetComponent<Rigidbody2D>().velocity = new Vector3(40, 0, 0);
+        LeanTween.value(gameObject, 0, 1, 0.8f).setOnUpdate((float val) => { Time.timeScale = Mathf.Lerp(1, 0.15f, val); }).setIgnoreTimeScale(true);
+        yield return new WaitForSecondsRealtime(0.8f);
         UIManager.Instance.winUI.TogglePanel(true);
     }
 
