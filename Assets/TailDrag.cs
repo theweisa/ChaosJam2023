@@ -17,13 +17,16 @@ public class TailDrag : MonoBehaviour
     private void FixedUpdate()
     {
         lr.SetPosition(0, this.transform.position);
-        lr.SetPosition(1, PlayerManager.Instance.currentRat.transform.position);
+        lr.SetPosition(1, PlayerManager.Instance.currentRat.GetComponent<RatController>().tailSprite.transform.position);
     }
 
     private void OnMouseDown()
     {
         if (GameManager.Instance.gameState != GameManager.GameState.Throwing || PlayerManager.Instance.isHeld) return;
         Debug.Log("pickup!");
+        LeanTween.moveY(PlayerManager.Instance.claw, PlayerManager.Instance.playerStartPosition.position.y, 1.5f).setOnComplete(()=>{
+            PlayerManager.Instance.claw.SetActive(false);
+        });
         mousePositionOffset = gameObject.transform.position - Global.GetMouseWorldPosition();
         PlayerManager.Instance.isHeld = true;
     }
@@ -41,6 +44,6 @@ public class TailDrag : MonoBehaviour
         tailRb.bodyType = RigidbodyType2D.Dynamic;
         tailRb.mass = 0f;
         tailRb.angularDrag = 5f;
-        StartCoroutine(PlayerManager.Instance.ThrowRat());
+        PlayerManager.Instance.ThrowRat();
     }
 }

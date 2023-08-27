@@ -5,7 +5,9 @@ using UnityEngine;
 public class RatController : MonoBehaviour
 {
     public static RatController masterRat;
+    public static List<RatController> connectedRats = new List<RatController>();
     public SpringJoint2D joint;
+    public SpriteRenderer tailSprite;
     public Vector3 preVelocity = Vector3.zero;
 
     public bool isMaster = false;
@@ -13,7 +15,7 @@ public class RatController : MonoBehaviour
     public bool tailTriggered;
     public bool debug;
 
-    private void Awake()
+    private void Start()
     {
         if (isMaster)
         {
@@ -24,6 +26,7 @@ public class RatController : MonoBehaviour
             joint.connectedBody = PlayerManager.Instance.tail.GetComponent<Rigidbody2D>();
             GetComponent<Collider2D>().layerOverridePriority = 1;
             GetComponent<Collider2D>().excludeLayers = LayerMask.GetMask("AttachedRat");
+            connectedRats.Add(this);
         }
     }
 
@@ -37,11 +40,20 @@ public class RatController : MonoBehaviour
         if (masterRat != null)
         {
             masterRat.joint.enabled = false;
+
+            if (newMasterRat.joint == null && newMasterRat.GetComponent<SpringJoint2D>() == null)
+            {
+                ComponentHelper.CopyComponent<SpringJoint2D>(masterRat.joint, newMasterRat.gameObject);
+                newMasterRat.joint = newMasterRat.GetComponent<SpringJoint2D>();
+                Destroy(masterRat.joint);
+            }
+
         }
 
         masterRat = newMasterRat;
         PlayerManager.Instance.currentRat = newMasterRat.gameObject;
-        TailDrag tailDrag = Global.FindComponent<TailDrag>(PlayerManager.Instance.gameObject);
+        TailDrag tailDrag = Global.FindComponent<TailDrag>(PlayerManager.Instance.gameObject);        
+        
         tailDrag.joint = newMasterRat.joint;
         newMasterRat.joint.enabled = true;
         newMasterRat.joint.connectedBody = tailDrag.GetComponent<Rigidbody2D>();
@@ -64,6 +76,8 @@ public class RatController : MonoBehaviour
         rat.GetComponent<Collider2D>().layerOverridePriority = 1;
         rat.GetComponent<Collider2D>().excludeLayers = LayerMask.GetMask("AttachedRat");
         */
+
+        connectedRats.Add(rat);
 
         if (tailTriggered && masterRat == this)
         {
