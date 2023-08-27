@@ -8,7 +8,7 @@ public class CameraManager : UnitySingleton<CameraManager>
     public CameraState currentCameraState = CameraState.StageView;
     public CinemachineBrain mainCamera;
 
-    [SerializeField] public CinemachineVirtualCamera playerCamera, initialCollisionCamera, collisionCamera, stageCamera;
+    [SerializeField] public CinemachineVirtualCamera playerCamera, initialCollisionCamera, collisionCamera, stageCamera, winCamera;
 
     public CinemachineVirtualCamera currentCamera;
     public override void Awake() {
