@@ -77,10 +77,45 @@ public class PlayerManager : UnitySingleton<PlayerManager>
         if (GameManager.Instance.gameState == GameManager.GameState.Thrown) {
             GameManager.Instance.gameState = GameManager.GameState.ResetRat;
             CameraManager.Instance.PanToCamera(CameraManager.Instance.initialCollisionCamera);
-            yield return new WaitForSeconds(2f);
+            GameManager.Instance.ShowGoalIndicator();
+            //yield return new WaitForSeconds(2f);
+            yield return PickUpRat();
             CameraManager.Instance.PanToCamera(CameraManager.Instance.playerCamera);
+            yield return new WaitForSeconds(1f);
             yield return ResetRat();
         }
+    }
+
+    public IEnumerator PickUpRat() {
+        Rigidbody2D tailRb = tail.GetComponent<Rigidbody2D>();
+        Vector2 tailPos = currentRat.GetComponent<RatController>().tailSprite.transform.position;
+        claw.SetActive(true);
+        Global.FadeIn(claw.GetComponent<SpriteRenderer>(), 0.3f);
+        claw.GetComponent<Animator>().SetBool("holding", false);
+        claw.transform.position = new Vector2(tailPos.x, playerStartPosition.position.y);
+        LeanTween.moveY(claw, currentRat.GetComponent<RatController>().tailSprite.transform.position.y, 2f);
+        yield return new WaitForSeconds(3f);
+        claw.GetComponent<Animator>().SetBool("holding", true);
+
+        foreach (Collider2D coll in currentRat.GetComponents<Collider2D>()) {
+            coll.enabled = false;
+        }
+        foreach (Collider2D coll in currentRat.GetComponentsInChildren<Collider2D>()) {
+            coll.enabled = false;
+        }
+        foreach (SpriteRenderer sprite in currentRat.GetComponents<SpriteRenderer>()) {
+            Global.FadeOut(sprite, 1f);
+        }
+        foreach (SpriteRenderer sprite in currentRat.GetComponentsInChildren<SpriteRenderer>()) {
+            Global.FadeOut(sprite, 1f);
+        }
+        tailRb.velocity = Vector2.zero;
+        tailRb.bodyType = RigidbodyType2D.Kinematic;
+        currentRat.GetComponent<RatClamp>().ignoreClamp = false;
+        SetTailPosition(tailPos, false);
+        Global.FadeOut(claw.GetComponent<SpriteRenderer>(), 1f);
+        LeanTween.moveY(tail, tail.transform.position.y + 10f, 1f);
+        LeanTween.moveY(claw, tail.transform.position.y + 10f, 1f);
     }
 
     public IEnumerator ResetRat(bool start=false) {
@@ -90,8 +125,19 @@ public class PlayerManager : UnitySingleton<PlayerManager>
         lifespanTimer = 0f;
         tail.GetComponent<LineRenderer>().enabled = true;
         currentRat.GetComponent<RatController>().tailSprite.enabled = false;
-
-        
+        Global.FindComponent<Animator>(currentRat).SetBool("hanging", true);
+        foreach (Collider2D coll in currentRat.GetComponents<Collider2D>()) {
+            coll.enabled = true;
+        }
+        foreach (Collider2D coll in currentRat.GetComponentsInChildren<Collider2D>()) {
+            coll.enabled = true;
+        }
+        foreach (SpriteRenderer sprite in currentRat.GetComponents<SpriteRenderer>()) {
+            Global.FadeIn(sprite, 0.5f);
+        }
+        foreach (SpriteRenderer sprite in currentRat.GetComponentsInChildren<SpriteRenderer>()) {
+            Global.FadeIn(sprite, 0.5f);
+        }
 
         Rigidbody2D tailRb = tail.GetComponent<Rigidbody2D>();
         tailRb.velocity = Vector2.zero;
@@ -101,6 +147,8 @@ public class PlayerManager : UnitySingleton<PlayerManager>
         GameManager.Instance.levelWalls.SetWallEnable(TriggerEnterBox.WallType.Left, false);
         SetTailPosition(playerStartPosition.position);
         claw.SetActive(true);
+        Global.FadeIn(claw.GetComponent<SpriteRenderer>(), 0.5f);
+        claw.GetComponent<Animator>().SetBool("holding", true);
         claw.transform.position = playerStartPosition.position;
         LeanTween.moveY(tail, playerEndPosition.position.y, 3f);
         LeanTween.moveY(claw, playerEndPosition.position.y, 3f);

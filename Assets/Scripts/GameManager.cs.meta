@@ -3,7 +3,11 @@ guid: 04748763a4f79044cae929bf37e43e89
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - grateController: {instanceID: 0}
+  - goalIndicator: {instanceID: 0}
+  - levelWalls: {instanceID: 0}
+  - damageText: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -26,7 +26,7 @@ public class RatController : MonoBehaviour
 
     private void Start()
     {
-
+        tailSprite.enabled = false;
         if (isMaster)
         {
             ratFlightTime = 0;
@@ -78,7 +78,8 @@ public class RatController : MonoBehaviour
 
         var sticky = Instantiate(stickyParticlePrefab, contactPoint.point, Quaternion.identity);
         sticky.transform.parent = transform;
-
+        Global.FindComponent<Animator>(rat.gameObject).SetBool("hanging", true);
+        rat.tailSprite.enabled = true;
         /*
         FixedJoint2D newJoint = gameObject.AddComponent<FixedJoint2D>();
         newJoint.anchor = contactPoint.point;
