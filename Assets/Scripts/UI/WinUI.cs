@@ -11,11 +11,11 @@ public class WinUI : MonoBehaviour
 
     public void NextLevel()
     {
-
+        SaveManager.Instance.ForceLoadLevel(SaveManager.Instance.currentLevel + 1);
     }
 
     public void MainMenu()
     {
-
+        SaveManager.Instance.ReturnToMainMenu();
     }
 }

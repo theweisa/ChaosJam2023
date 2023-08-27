@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : UnitySingleton<GameManager>
 {
@@ -20,6 +21,7 @@ public class GameManager : UnitySingleton<GameManager>
     {
         base.Awake();
         Time.timeScale = 1;
+        SceneManager.LoadScene(SaveManager.Instance.levelToLoad, LoadSceneMode.Additive);
     }
 
     // Update is called once per frame

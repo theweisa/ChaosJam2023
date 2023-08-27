@@ -16,6 +16,6 @@ public class PauseUI : MonoBehaviour
 
     public void MainMenu()
     {
-
+        SaveManager.Instance.ReturnToMainMenu();
     }
 }

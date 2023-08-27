@@ -19,6 +19,7 @@ public class ExitGrateController : MonoBehaviour
             {
                 Debug.Log("sewer grate destroyed");
                 Destroy(gameObject);
+                GameManager.Instance.WinGame();
             }
         }
     }
