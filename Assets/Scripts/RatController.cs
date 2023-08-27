@@ -96,6 +96,11 @@ public class RatController : MonoBehaviour
         connectedRats.Add(rat);
         if (GameManager.Instance.musicProgression < 7) //Music progression goes from 0-10, 0-8 are the regular loop
         {
+            if (GameManager.Instance.musicProgression == 0) {
+                foreach (SquashScript ratObj in Resources.FindObjectsOfTypeAll<SquashScript>()) {
+                    StartCoroutine(ratObj.GrooveOnBeat());
+                }
+            }
             GameManager.Instance.musicProgression++;
             RuntimeManager.StudioSystem.setParameterByName("RatProgression", GameManager.Instance.musicProgression);         
         }

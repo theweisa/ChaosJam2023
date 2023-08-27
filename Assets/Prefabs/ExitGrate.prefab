@@ -227,4 +227,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sr: {fileID: 3644915365495874490}
-  requiredRatPercentage: 0.75
+  requiredRatPercentage: 0.6

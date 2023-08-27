@@ -370,7 +370,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1299260879130469983, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1562262260312557046, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
@@ -403,6 +403,22 @@ PrefabInstance:
     - target: {fileID: 2771162267197317118, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.476
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383059710080620828, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9917691
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383059710080620828, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99998945
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383059710080620828, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0045923498
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306413308352298587, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7580050985035309851, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -444,6 +460,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8457437361353846835, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8485101731949089392, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -460,14 +480,6 @@ PrefabInstance:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 1883041014920316526}
-    - target: {fileID: 8792973129433110958, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.226
-      objectReference: {fileID: 0}
-    - target: {fileID: 8792973129433110958, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.883
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

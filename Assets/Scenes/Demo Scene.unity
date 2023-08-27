@@ -157,10 +157,10 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
-  m_Intensity: 0.8
+  m_Intensity: 0.65
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 0000000009666d6e
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -220,7 +220,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3609269172169767152, guid: 5d694082e046e3e47821d00227de1d1f, type: 3}
       propertyPath: levelToLoad
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3609269172169767152, guid: 5d694082e046e3e47821d00227de1d1f, type: 3}
       propertyPath: currentLevel
@@ -428,6 +428,10 @@ PrefabInstance:
     - target: {fileID: 1213557648922739243, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610714892608720797, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.04
       objectReference: {fileID: 0}
     - target: {fileID: 3615139022458895830, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
       propertyPath: m_Name
@@ -743,7 +747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4621960957062644738, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.22305
+      value: -16.236439
       objectReference: {fileID: 0}
     - target: {fileID: 4621960957062644738, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
       propertyPath: m_LocalPosition.y
