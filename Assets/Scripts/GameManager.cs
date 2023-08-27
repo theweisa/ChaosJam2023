@@ -78,7 +78,10 @@ public class GameManager : UnitySingleton<GameManager>
     {
         yield return null;
         TogglePause(false);
-        Time.timeScale = 0;
+        CameraManager.Instance.PanToCamera(CameraManager.Instance.winCamera);
+        RatController.masterRat.GetComponent<Rigidbody2D>().velocity = new Vector3(40, 0, 0);
+        LeanTween.value(gameObject, 0, 1, 0.8f).setOnUpdate((float val) => { Time.timeScale = Mathf.Lerp(1, 0.15f, val); }).setIgnoreTimeScale(true);
+        yield return new WaitForSecondsRealtime(0.8f);
         UIManager.Instance.winUI.TogglePanel(true);
     }
 
