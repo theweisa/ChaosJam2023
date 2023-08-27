@@ -1,0 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using FMODUnity;
+
+public class FMODEventRef : MonoBehaviour
+{
+    [field: Header("Impacts")]
+    [field: SerializeField] public EventReference RatImpact {get; private set;}
+    [field: SerializeField] public EventReference BoxDestruction {get; private set;}
+    
+    [field: Header("Whooshes")]
+    [field: SerializeField] public EventReference RatFlying {get; private set;}
+    [field: SerializeField] public EventReference RatSwinging {get; private set;}
+
+    public static FMODEventRef instance {get; private set;}
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogError("Attempted to create second FMODEventRef instance.");
+        }
+        instance = this;
+    }
+}

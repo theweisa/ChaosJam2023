@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using NaughtyAttributes;
+using FMODUnity;
 
 [ExecuteInEditMode]
 [RequireComponent(typeof(Rigidbody2D))]
@@ -118,8 +119,6 @@ public class Breakable : MonoBehaviour
 
     }
 
-
-
     void CalculateMass()
     {
         rb.useAutoMass = true;
@@ -175,7 +174,7 @@ public class Breakable : MonoBehaviour
         if(currentBreakHealth <= 0)
         {
             Debug.Log("I broke!");
-
+            RuntimeManager.PlayOneShot(FMODEventRef.instance.BoxDestruction, "Material", 3);
             RatController rat = collision.transform.GetComponent<RatController>();
 
             if (rat && collision.gameObject.GetComponent<Rigidbody2D>())

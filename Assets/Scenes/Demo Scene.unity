@@ -557,6 +557,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &995561884 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6898925960853836223, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
+  m_PrefabInstance: {fileID: 6407296261559552598}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &995561890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995561884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &1093467985
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,6 +891,91 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 300}
   m_EdgeRadius: 0
+--- !u!1 &1654845780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1654845781}
+  - component: {fileID: 1654845783}
+  - component: {fileID: 1654845782}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1654845781
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654845780}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.3455887, y: 3.6600542, z: -0.08065619}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1654845782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654845780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e8699df90f8a1042a36f2d83e1fb7ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RatImpact>k__BackingField:
+    Guid:
+      Data1: 1130749348
+      Data2: 1240858121
+      Data3: -1091655755
+      Data4: 1708094352
+    Path: event:/Impact
+  <BoxDestruction>k__BackingField:
+    Guid:
+      Data1: 1513562128
+      Data2: 1309354522
+      Data3: -489837426
+      Data4: -1243336473
+    Path: event:/Destruction
+  <RatFlying>k__BackingField:
+    Guid:
+      Data1: -441329897
+      Data2: 1313468323
+      Data3: -1393389912
+      Data4: -1631177551
+    Path: event:/RatFalling
+  <RatSwinging>k__BackingField:
+    Guid:
+      Data1: -1961656119
+      Data2: 1126125577
+      Data3: -1647870275
+      Data4: -1445172579
+    Path: event:/RatSpinning
+--- !u!114 &1654845783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654845780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5811341c3fd5c704ba1847aaaf55add1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2000448053 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7624865011558183808, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
@@ -1145,10 +1248,14 @@ PrefabInstance:
       propertyPath: m_Targets.Array.data[1].target
       value: 
       objectReference: {fileID: 1105644534}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8441480296887022248, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6898925960853836223, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 995561890}
   m_SourcePrefab: {fileID: 100100000, guid: a66ddbb776091724fb9385adadf9feeb, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -1156,6 +1263,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 619394802}
   - {fileID: 3764495269412133164}
+  - {fileID: 1654845781}
   - {fileID: 6407296261559552598}
   - {fileID: 4611476023236210430}
   - {fileID: 1093467988}

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using FMODUnity;
+using FMOD.Studio;
 
 public class PlayerManager : UnitySingleton<PlayerManager>
 {
@@ -13,6 +15,7 @@ public class PlayerManager : UnitySingleton<PlayerManager>
     public float stopTimer = 0f;
     public float lifespan = 10f;
     private float lifespanTimer = 0f;
+    private EventInstance ratFlying;
     public Transform playerStartPosition, playerEndPosition;
     // Start is called before the first frame update
     public override void Awake()
@@ -45,12 +48,17 @@ public class PlayerManager : UnitySingleton<PlayerManager>
         }
     }
 
+
     public void ThrowRat() {
         isHeld = false;
         GameManager.Instance.gameState = GameManager.GameState.Thrown;
         currentRat.GetComponent<RatClamp>().ignoreClamp = true;
         tail.GetComponent<LineRenderer>().enabled = false;
         currentRat.GetComponent<RatController>().tailSprite.enabled = true;
+        
+        ratFlying = AudioManager.instance.CreateEventInstance(FMODEventRef.instance.RatFlying);
+        ratFlying.setParameterByName("RatFlightTime", 0);
+        ratFlying.start();
 
         CameraManager.Instance.PanToCamera(CameraManager.Instance.collisionCamera);
     }
