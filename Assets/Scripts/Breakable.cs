@@ -169,6 +169,13 @@ public class Breakable : MonoBehaviour
         }
 
         currentBreakHealth -= impulse;
+
+        if(breakableMaterial && breakableMaterial.damagedParticlePrefab)
+        {
+            var particle = Instantiate(breakableMaterial.damagedParticlePrefab, collision.contacts[0].point, Quaternion.identity);
+            particle.transform.up = -collision.contacts[0].normal;
+        }
+
         var txt = Instantiate(GameManager.Instance.damageText, collision.contacts[0].point, Quaternion.identity);
         txt.GetComponent<DamageText>().Init(impulse);
         float shakeStr = Global.Map(impulse, 0f, 1000f, 0f, 130f);

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14662eaa5a48a0a41af4f0f946af0eab, type: 3}
   m_Name: Wood
   m_EditorClassIdentifier: 
-  id: wood
+  id: 0
   massCoefficient: 1
   breakCoefficient: 3
   physicsMaterial: {fileID: 6200000, guid: 99656e6dce009ce45b05124e880f58dd, type: 2}
+  damagedParticlePrefab: {fileID: 4162027394008824001, guid: b6d7e86ecb196d14a8046f7644e1136c, type: 3}

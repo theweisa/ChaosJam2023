@@ -16,3 +16,4 @@ MonoBehaviour:
   massCoefficient: 3
   breakCoefficient: 17
   physicsMaterial: {fileID: 6200000, guid: 3f7fc290d5e732948a794122a4b98832, type: 2}
+  damagedParticlePrefab: {fileID: 4162027394008824001, guid: b6d7e86ecb196d14a8046f7644e1136c, type: 3}

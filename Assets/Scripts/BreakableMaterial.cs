@@ -13,4 +13,6 @@ public class BreakableMaterial : ScriptableObject
     public PhysicsMaterial2D physicsMaterial;
     //idk put some sound stuff here or something?
 
+
+    public GameObject damagedParticlePrefab;
 }
