@@ -11,5 +11,6 @@ public class GameUI : MonoBehaviour
     public void SetPointsText(int pts)
     {
         pointsText.text = pts.ToString();
+        pointsText.fontSize = 36 + (pts / 1000);
     }
 }
