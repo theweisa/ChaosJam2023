@@ -9,7 +9,6 @@ TagManager:
   - Glass
   - Cardboard
   - Scrap
-  - Chain
   layers:
   - Default
   - TransparentFX
@@ -19,11 +18,11 @@ TagManager:
   - UI
   - FreeRat
   - AttachedRat
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Wall
+  - Glass
+  - Cardboard
+  - Scrap
+  - Chain
   - 
   - 
   - 

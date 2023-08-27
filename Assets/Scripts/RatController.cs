@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using FMODUnity;
+using FMOD.Studio;
 using UnityEngine;
 
 public class RatController : MonoBehaviour
@@ -11,15 +13,22 @@ public class RatController : MonoBehaviour
     public SpriteRenderer tailSprite;
     public Vector3 preVelocity = Vector3.zero;
 
+    public float ratFlightTime;
     public bool isMaster = false;
     public bool isAttached = false;
     public bool tailTriggered;
     public bool debug;
 
+    private Rigidbody ratRigidBody;
+
+
+
     private void Start()
     {
+
         if (isMaster)
         {
+            ratFlightTime = 0;
             masterRat = this;
             isAttached = true;
             joint.enabled = true;
@@ -97,6 +106,10 @@ public class RatController : MonoBehaviour
         {
             SetNewMasterRat(this);
         }
+        if (GameManager.Instance.gameState == GameManager.GameState.Thrown && masterRat == this) {
+                RuntimeManager.StudioSystem.setParameterByName("RatFlightTime", ratFlightTime);   
+                ratFlightTime += Time.deltaTime;                  
+        }
     }
 
     private void FixedUpdate()
@@ -104,11 +117,19 @@ public class RatController : MonoBehaviour
         if (GetComponent<Rigidbody2D>())
         {
             preVelocity = GetComponent<Rigidbody2D>().velocity;
-        }
-        
+            if (masterRat == this)
+            {
+                RuntimeManager.StudioSystem.setParameterByName("RatVelocity", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.magnitude));
+              
+            }
+        } 
     }
     private void OnCollisionEnter2D(Collision2D collision) {
-        
+        if (masterRat == this)
+        {
+            ratFlightTime = 0;
+            RuntimeManager.PlayOneShot(FMODEventRef.instance.RatImpact, "Material", collision.gameObject.layer);
+        }
     }
 }
 

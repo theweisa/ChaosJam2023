@@ -174,7 +174,8 @@ public class Breakable : MonoBehaviour
         if(currentBreakHealth <= 0)
         {
             Debug.Log("I broke!");
-            RuntimeManager.PlayOneShot(FMODEventRef.instance.BoxDestruction, "Material", 3);
+
+            RuntimeManager.PlayOneShot(FMODEventRef.instance.BoxDestruction, "Material", gameObject.layer);
             RatController rat = collision.transform.GetComponent<RatController>();
 
             if (rat && collision.gameObject.GetComponent<Rigidbody2D>())

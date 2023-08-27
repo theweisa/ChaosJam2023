@@ -58,6 +58,7 @@ public class PlayerManager : UnitySingleton<PlayerManager>
         
         ratFlying = AudioManager.instance.CreateEventInstance(FMODEventRef.instance.RatFlying);
         ratFlying.setParameterByName("RatFlightTime", 0);
+        currentRat.GetComponent<RatController>().ratFlightTime = 0;
         ratFlying.start();
 
         CameraManager.Instance.PanToCamera(CameraManager.Instance.collisionCamera);
@@ -74,6 +75,8 @@ public class PlayerManager : UnitySingleton<PlayerManager>
     }
 
     public IEnumerator ResetRat(bool start=false) {
+        ratFlying.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        ratFlying.release();
         stopTimer = 0f;
         lifespanTimer = 0f;
         tail.GetComponent<LineRenderer>().enabled = true;
