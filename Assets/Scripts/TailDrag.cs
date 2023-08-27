@@ -48,4 +48,9 @@ public class TailDrag : MonoBehaviour
         tailRb.angularDrag = 5f;
         PlayerManager.Instance.ThrowRat();
     }
+
+    public void RequestPause()
+    {
+        GameManager.Instance.TogglePause();
+    }
 }

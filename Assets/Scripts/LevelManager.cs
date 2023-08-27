@@ -17,6 +17,5 @@ public class LevelManager : UnitySingleton<LevelManager>
     void Start()
     {
         Debug.Log(GameManager.Instance);
-        StartCoroutine(GameManager.Instance.StartLevel());
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : UnitySingleton<GameManager>
 {
@@ -9,6 +10,7 @@ public class GameManager : UnitySingleton<GameManager>
     
     public TriggerEnterBox levelWalls;
     public GameObject damageText;
+    public bool isPaused = false;
     /*
         logic:
             game starts by panning to the area then panning back
@@ -18,9 +20,22 @@ public class GameManager : UnitySingleton<GameManager>
     public override void Awake()
     {
         base.Awake();
+        Time.timeScale = 1;
+        
     }
-    void Start() {
+
+    private void Start()
+    {
+        StartCoroutine(LoadLevel());
+    }
+
+    public IEnumerator LoadLevel()
+    {
+        yield return null;
+        SceneManager.LoadScene(SaveManager.Instance.levelToLoad, LoadSceneMode.Additive);
+        yield return null;
         levelWalls = Global.FindComponent<TriggerEnterBox>(LevelManager.Instance.levelWalls.gameObject);
+        StartCoroutine(StartLevel());
     }
 
     // Update is called once per frame
@@ -62,5 +77,44 @@ public class GameManager : UnitySingleton<GameManager>
     public IEnumerator WinRoutine()
     {
         yield return null;
+        TogglePause(false);
+        Time.timeScale = 0;
+        UIManager.Instance.winUI.TogglePanel(true);
+    }
+
+    public void TogglePause()
+    {
+        if(gameState == GameState.Win)
+        {
+            return;
+        }
+
+        isPaused = !isPaused;
+        UpdatePauseState();
+    }
+
+    public void TogglePause(bool state)
+    {
+        if (gameState == GameState.Win)
+        {
+            return;
+        }
+
+        isPaused = state;
+        UpdatePauseState();
+    }
+
+    private void UpdatePauseState()
+    {
+        if (isPaused)
+        {
+            Time.timeScale = 0;
+            UIManager.Instance.pauseUI.TogglePanel(true);
+        }
+        else
+        {
+            Time.timeScale = 1;
+            UIManager.Instance.pauseUI.TogglePanel(false);
+        }
     }
 }
