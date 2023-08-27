@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1654496905146885141}
-  maxAngularVelocity: 70
+  maxAngularVelocity: 90
   unclampedVelocityModifier: 3
   ignoreClamp: 0
 --- !u!114 &859738329878234987
