@@ -27,6 +27,11 @@ public class CameraManager : UnitySingleton<CameraManager>
                 break;
         }
     }
+    public void Shake(float str=1f, float dur=1f, float freq=1f, bool perma=false) {
+        CameraShake shake = currentCamera.GetComponent<CameraShake>();
+        if (shake == null) return;
+        shake.StartShake(str,dur,freq,perma);
+    }
 
     public void SetCameraState(CameraState newState)
     {
