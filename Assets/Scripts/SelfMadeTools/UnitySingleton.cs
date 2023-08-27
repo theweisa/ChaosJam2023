@@ -21,7 +21,7 @@ public abstract class UnitySingleton<T> : MonoBehaviour where T : MonoBehaviour
         {
             if(Instance != GetComponent<T>())
             {
-                Destroy(this);
+                Destroy(this.gameObject);
             }
         }
     }

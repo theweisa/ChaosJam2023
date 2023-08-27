@@ -33,9 +33,9 @@ public class GameManager : UnitySingleton<GameManager>
     {
         yield return null;
         SceneManager.LoadScene(SaveManager.Instance.levelToLoad, LoadSceneMode.Additive);
-    }
-    void Start() {
+        yield return null;
         levelWalls = Global.FindComponent<TriggerEnterBox>(LevelManager.Instance.levelWalls.gameObject);
+        StartCoroutine(StartLevel());
     }
 
     // Update is called once per frame

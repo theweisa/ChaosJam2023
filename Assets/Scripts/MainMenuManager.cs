@@ -21,7 +21,7 @@ public class MainMenuManager : UnitySingleton<MainMenuManager>
     {
         SaveManager.Instance.levelToLoad = index;
         SaveManager.Instance.currentLevel = index;
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
+        SceneManager.LoadScene(1);
     }
 
 

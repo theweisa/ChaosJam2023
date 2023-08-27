@@ -18,13 +18,13 @@ public class SaveManager : UnitySingleton<SaveManager>
     {
         currentLevel = index;
         levelToLoad = index;
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
+        SceneManager.LoadScene(1);
     }
 
     public void ReturnToMainMenu()
     {
         levelToLoad = 0;
         currentLevel = 0;
-        SceneManager.LoadScene(0, LoadSceneMode.Single);
+        SceneManager.LoadScene(0);
     }
 }
