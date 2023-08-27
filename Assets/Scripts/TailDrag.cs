@@ -9,9 +9,11 @@ public class TailDrag : MonoBehaviour
     public Rigidbody2D tailRb;
     public SpringJoint2D joint;
     public LineRenderer lr;
+    public LayerMask layerMask;
 
     void Awake() {
         tailRb = tailRb != null ? tailRb : Global.FindComponent<Rigidbody2D>(gameObject);
+        Camera.main.eventMask = layerMask;
     }
 
     private void FixedUpdate()
