@@ -14,13 +14,12 @@ public class SquashScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        baseScale = transform.localScale;
     }
 
     public void StartGrooving() {
         int left = UnityEngine.Random.Range(0, 2) == 0 ? -1 : 1;
         turnTimer = beatsPerGroove*(1f/(bpm/60f));
-        baseScale = transform.localScale;
         //float squashInterval = 
         Squash();
         Rotate(left);
