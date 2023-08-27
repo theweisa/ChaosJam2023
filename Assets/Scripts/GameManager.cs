@@ -60,6 +60,7 @@ public class GameManager : UnitySingleton<GameManager>
 
     public IEnumerator StartLevel() {
         gameState = GameState.Start;
+        PlayerManager.Instance.dragText.gameObject.SetActive(false);
         levelAmbience = AudioManager.instance.CreateEventInstance(FMODEventRef.instance.SewerAmbience);
         levelAmbience.start();
         levelMusic = AudioManager.instance.CreateEventInstance(FMODEventRef.instance.LevelMusic);
@@ -101,6 +102,7 @@ public class GameManager : UnitySingleton<GameManager>
 
     public void InitThrowing() {
         throwsTaken++;
+        PlayerManager.Instance.dragText.gameObject.SetActive(true);
         gameState = GameState.Throwing;
     }
 

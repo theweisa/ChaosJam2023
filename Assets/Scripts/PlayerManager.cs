@@ -18,6 +18,7 @@ public class PlayerManager : UnitySingleton<PlayerManager>
     private EventInstance ratFlying;
     private EventInstance ratSpinning;
     public Transform playerStartPosition, playerEndPosition;
+    public TMPro.TMP_Text dragText;
     // Start is called before the first frame update
     public override void Awake()
     {
@@ -61,6 +62,7 @@ public class PlayerManager : UnitySingleton<PlayerManager>
 
     public void ThrowRat() {
         isHeld = false;
+        dragText.gameObject.SetActive(false);
         GameManager.Instance.gameState = GameManager.GameState.Thrown;
         currentRat.GetComponent<RatClamp>().ignoreClamp = true;
         tail.GetComponent<LineRenderer>().enabled = false;
