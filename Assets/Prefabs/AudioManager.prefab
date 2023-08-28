@@ -85,3 +85,52 @@ MonoBehaviour:
       Data3: -1647870275
       Data4: -1445172579
     Path: event:/RatSpinning
+  <RatRelease>k__BackingField:
+    Guid:
+      Data1: -1199738049
+      Data2: 1223984679
+      Data3: -1576482156
+      Data4: -689839590
+    Path: event:/RatRelease
+  <LevelMusic>k__BackingField:
+    Guid:
+      Data1: 600557571
+      Data2: 1147277247
+      Data3: 1499971511
+      Data4: -1868678594
+    Path: event:/Music
+  <SewerAmbience>k__BackingField:
+    Guid:
+      Data1: 691684989
+      Data2: 1179884256
+      Data3: 879531438
+      Data4: -506463855
+    Path: event:/Ambience
+  <RatCollect>k__BackingField:
+    Guid:
+      Data1: 1794490904
+      Data2: 1171725005
+      Data3: 806898316
+      Data4: -1268172754
+    Path: event:/RatCollect
+  <ClawMachine>k__BackingField:
+    Guid:
+      Data1: -826388928
+      Data2: 1171338519
+      Data3: 1014442401
+      Data4: 35878551
+    Path: event:/ClawMachine
+  <ClawMachineLeave>k__BackingField:
+    Guid:
+      Data1: -1372908043
+      Data2: 1128445226
+      Data3: -1378479232
+      Data4: 906783340
+    Path: event:/ClawMachineLeave
+  <ClawMachineEnter>k__BackingField:
+    Guid:
+      Data1: 1830091709
+      Data2: 1260735625
+      Data3: 1695602861
+      Data4: -890100583
+    Path: event:/ClawMachineEnter
