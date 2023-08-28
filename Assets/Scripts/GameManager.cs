@@ -55,7 +55,9 @@ public class GameManager : UnitySingleton<GameManager>
     // Update is called once per frame
     void Update()
     {
-
+        /*if (Input.GetMouseButtonDown(0)) {
+            UIManager.Instance.winUI.TogglePanel(true);
+        }*/
     }
 
     public IEnumerator StartLevel() {

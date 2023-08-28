@@ -62,7 +62,6 @@ public class PlayerManager : UnitySingleton<PlayerManager>
 
     public void ThrowRat() {
         isHeld = false;
-        dragText.gameObject.SetActive(false);
         GameManager.Instance.gameState = GameManager.GameState.Thrown;
         currentRat.GetComponent<RatClamp>().ignoreClamp = true;
         tail.GetComponent<LineRenderer>().enabled = false;

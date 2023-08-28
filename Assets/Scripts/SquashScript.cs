@@ -11,16 +11,20 @@ public class SquashScript : MonoBehaviour
     public float squashCoefficient = 0.8f;
     public int beatsPerGroove = 3;
     Vector2 baseScale;
+    Vector3 baseRotation;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        baseScale = transform.localScale;
+        baseScale = new Vector3(1,1,1);
+        baseRotation = new Vector3(0,0,0);
+        transform.localScale = baseScale;
+        transform.localEulerAngles = baseRotation;
     }
 
     private void OnDisable()
     {
         transform.localScale = baseScale;
-        transform.localEulerAngles = Vector3.zero;
+        transform.localEulerAngles = baseRotation;
     }
 
     public void StartGrooving() {

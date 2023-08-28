@@ -41,4 +41,13 @@ public static class Global {
         newColor.a = 1;
         LeanTween.value(sprite.gameObject, (Color val)=>{ sprite.color=val; }, currColor, newColor, dur).setEase(LeanTweenType.easeInExpo);
     }
+
+    public static void PopOutText(TMPro.TMP_Text text, float popOutAmount=1.2f, float time=0.2f, LeanTweenType ease=LeanTweenType.linear) {
+        float baseFontSize = text.fontSize;
+        LeanTween.value(text.gameObject, (float val)=>{
+            text.fontSize = val;
+        }, baseFontSize*popOutAmount, baseFontSize, time).setEase(ease).setOnComplete(()=>{
+            text.fontSize = baseFontSize;
+        });
+    }
 }
