@@ -11,6 +11,7 @@ public class CameraManager : UnitySingleton<CameraManager>
     [SerializeField] public CinemachineVirtualCamera playerCamera, initialCollisionCamera, collisionCamera, stageCamera, winCamera;
 
     public CinemachineVirtualCamera currentCamera;
+    public Transform maxPoint;
     public override void Awake() {
         base.Awake();
         //currentCamera = mainCamera.ActiveVirtualCamera.VirtualCameraGameObject.GetComponent<CinemachineVirtualCamera>();
