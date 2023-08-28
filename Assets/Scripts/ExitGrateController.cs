@@ -19,7 +19,7 @@ public class ExitGrateController : MonoBehaviour
 
             if (RatController.connectedRats.Count > requiredRatPercentage * totalRats)
             {
-                RuntimeManager.PlayOneShot(FMODEventRef.instance.BoxDestruction, "Material", 11);
+                RuntimeManager.PlayOneShot(FMODEventRef.instance.SewerGrate);
                 Debug.Log("sewer grate destroyed");
                 Destroy(gameObject);
                 GameManager.Instance.WinGame();

@@ -46,7 +46,7 @@ public static class Global {
         float baseFontSize = text.fontSize;
         LeanTween.value(text.gameObject, (float val)=>{
             text.fontSize = val;
-        }, baseFontSize*popOutAmount, baseFontSize, time).setEase(ease).setOnComplete(()=>{
+        }, baseFontSize*popOutAmount, baseFontSize, time).setEase(ease).setIgnoreTimeScale(true).setOnComplete(()=>{
             text.fontSize = baseFontSize;
         });
     }
