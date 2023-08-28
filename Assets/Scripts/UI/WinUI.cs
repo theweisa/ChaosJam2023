@@ -10,6 +10,7 @@ public class WinUI : MonoBehaviour
     public GameObject nextLevelButton;
     public TextMeshProUGUI ratText;
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI finalScoreText;
 
 
     public GameObject buttonParent;
@@ -40,22 +41,33 @@ public class WinUI : MonoBehaviour
 
     IEnumerator WinSequence()
     {
+        int score = GameManager.Instance.totalDamage;
         yield return new WaitForSecondsRealtime(0.5f);
+        Global.PopOutText(ratText);
         ratText.gameObject.SetActive(true);
         yield return new WaitForSecondsRealtime(0.8f);
         scoreText.gameObject.SetActive(true);
-        scoreText.text = GameManager.Instance.totalDamage + "";
+        Global.PopOutText(scoreText);
+        scoreText.text = score + "";
         yield return new WaitForSecondsRealtime(0.5f);
+        Global.PopOutText(scoreText);
         scoreText.text += " Damage";
         yield return new WaitForSecondsRealtime(0.8f);
+        Global.PopOutText(scoreText);
         scoreText.text += " x " + RatController.connectedRats.Count;
         yield return new WaitForSecondsRealtime(0.5f);
+        Global.PopOutText(scoreText);
         scoreText.text += " Rats";
         yield return new WaitForSecondsRealtime(0.5f);
+        Global.PopOutText(scoreText);
         scoreText.text += " = ";
         yield return new WaitForSecondsRealtime(0.5f);
-        scoreText.text += "\n\n" + (RatController.connectedRats.Count * GameManager.Instance.totalDamage);
+        finalScoreText.gameObject.SetActive(true);
+        Global.PopOutText(finalScoreText, 1.3f, 0.5f, LeanTweenType.easeInQuart);
+        finalScoreText.text = (RatController.connectedRats.Count * score).ToString();
         yield return new WaitForSecondsRealtime(0.8f);
         buttonParent.SetActive(true);
     }
+
+
 }
