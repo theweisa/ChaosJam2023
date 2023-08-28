@@ -42,6 +42,12 @@ public class WinUI : MonoBehaviour
     IEnumerator WinSequence()
     {
         int score = GameManager.Instance.totalDamage;
+        float throwBonus = 10 - GameManager.Instance.throwsTaken;
+        if (throwBonus <= 1)
+        {
+            throwBonus = 1;
+        }
+
         yield return new WaitForSecondsRealtime(0.5f);
         Global.PopOutText(ratText);
         ratText.gameObject.SetActive(true);
@@ -60,11 +66,16 @@ public class WinUI : MonoBehaviour
         scoreText.text += " Rats";
         yield return new WaitForSecondsRealtime(0.5f);
         Global.PopOutText(scoreText);
+        scoreText.text += " x " + throwBonus;
+        yield return new WaitForSecondsRealtime(0.5f);
+        Global.PopOutText(scoreText);
+        scoreText.text += " Throw Bonus";
+        yield return new WaitForSecondsRealtime(0.5f);
         scoreText.text += " = ";
         yield return new WaitForSecondsRealtime(0.5f);
         finalScoreText.gameObject.SetActive(true);
         Global.PopOutText(finalScoreText, 1.3f, 0.5f, LeanTweenType.easeInQuart);
-        finalScoreText.text = (RatController.connectedRats.Count * score).ToString();
+        finalScoreText.text = (RatController.connectedRats.Count * score * throwBonus).ToString();
         yield return new WaitForSecondsRealtime(0.8f);
         buttonParent.SetActive(true);
     }

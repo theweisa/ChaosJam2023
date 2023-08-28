@@ -103,7 +103,6 @@ public class GameManager : UnitySingleton<GameManager>
     }
 
     public void InitThrowing() {
-        throwsTaken++;
         PlayerManager.Instance.dragText.gameObject.SetActive(true);
         gameState = GameState.Throwing;
     }
