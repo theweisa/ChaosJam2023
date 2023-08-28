@@ -168,7 +168,7 @@ public class GameManager : UnitySingleton<GameManager>
         //Check to see if sewer grate break indicator should spawn
         int totalRats = FindObjectsOfType<RatController>().Length;
 
-        if (RatController.connectedRats.Count >= totalRats * grateController.requiredRatPercentage && !showIndicator)
+        if (RatController.connectedRats.Count > totalRats * grateController.requiredRatPercentage && !showIndicator)
         {
             Instantiate(goalIndicator, new Vector3(grateController.gameObject.transform.position.x - 10f, grateController.gameObject.transform.position.y, 0), Quaternion.identity);
             showIndicator = true;
