@@ -46,6 +46,12 @@ public class WinUI : MonoBehaviour
         Global.PopOutText(titleText, 1.6f, 0.2f);
         RuntimeManager.PlayOneShot(FMODEventRef.instance.RatImpact, "Material", 0);
         int score = GameManager.Instance.totalDamage;
+        float throwBonus = 10 - GameManager.Instance.throwsTaken;
+        if (throwBonus <= 1)
+        {
+            throwBonus = 1;
+        }
+
         yield return new WaitForSecondsRealtime(0.5f);
         RuntimeManager.PlayOneShot(FMODEventRef.instance.RatImpact, "Material", 0);
         Global.PopOutText(ratText);
@@ -70,12 +76,17 @@ public class WinUI : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.5f);
         RuntimeManager.PlayOneShot(FMODEventRef.instance.RatImpact, "Material", 0);
         Global.PopOutText(scoreText);
+        scoreText.text += " x " + throwBonus;
+        yield return new WaitForSecondsRealtime(0.5f);
+        Global.PopOutText(scoreText);
+        scoreText.text += " Throw Bonus";
+        yield return new WaitForSecondsRealtime(0.5f);
         scoreText.text += " = ";
         yield return new WaitForSecondsRealtime(0.5f);
         finalScoreText.gameObject.SetActive(true);
         RuntimeManager.PlayOneShot(FMODEventRef.instance.RatImpact, "Material", 0);
         Global.PopOutText(finalScoreText, 1.3f, 0.5f, LeanTweenType.easeInQuart);
-        finalScoreText.text = (RatController.connectedRats.Count * score).ToString();
+        finalScoreText.text = (RatController.connectedRats.Count * score * throwBonus).ToString();
         yield return new WaitForSecondsRealtime(0.8f);
         RuntimeManager.PlayOneShot(FMODEventRef.instance.RatImpact, "Material", 0);
         buttonParent.SetActive(true);

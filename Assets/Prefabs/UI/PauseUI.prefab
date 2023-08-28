@@ -136,6 +136,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 2572470867013517797}
     m_Modifications:
     - target: {fileID: 4595019200956213452, guid: b273a54544cea33448ccca33917b28d5, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d6e0528e65c92c4489b0a5724c88a9db, type: 3}
+    - target: {fileID: 4595019200956213452, guid: b273a54544cea33448ccca33917b28d5, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8e9bc356810a8944680ba73f6fa5f008, type: 3}
+    - target: {fileID: 4595019200956213452, guid: b273a54544cea33448ccca33917b28d5, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8e9bc356810a8944680ba73f6fa5f008, type: 3}
+    - target: {fileID: 4595019200956213452, guid: b273a54544cea33448ccca33917b28d5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8111887847506291027}
@@ -173,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5358149041526856168, guid: b273a54544cea33448ccca33917b28d5, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 250
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 5358149041526856168, guid: b273a54544cea33448ccca33917b28d5, type: 3}
       propertyPath: m_SizeDelta.y
@@ -233,17 +245,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8008570275661751132, guid: b273a54544cea33448ccca33917b28d5, type: 3}
       propertyPath: m_fontSize
-      value: 61.2
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008570275661751132, guid: b273a54544cea33448ccca33917b28d5, type: 3}
+      propertyPath: m_margin.y
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8486174022603829485, guid: b273a54544cea33448ccca33917b28d5, type: 3}
       propertyPath: m_Name
       value: BaseUIButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8994158508484210533, guid: b273a54544cea33448ccca33917b28d5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1bfc90d52ef5de84ca37290494218a44, type: 3}
+    - target: {fileID: 8994158508484210533, guid: b273a54544cea33448ccca33917b28d5, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b273a54544cea33448ccca33917b28d5, type: 3}
+--- !u!114 &6657461760763659369 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8994158508484210533, guid: b273a54544cea33448ccca33917b28d5, type: 3}
+  m_PrefabInstance: {fileID: 2356972157408553740}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7705198929995657956 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5358149041526856168, guid: b273a54544cea33448ccca33917b28d5, type: 3}
@@ -368,12 +403,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 2572470867013517797}
     m_Modifications:
     - target: {fileID: 4595019200956213452, guid: b273a54544cea33448ccca33917b28d5, type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 6657461760763659369}
+    - target: {fileID: 4595019200956213452, guid: b273a54544cea33448ccca33917b28d5, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d6e0528e65c92c4489b0a5724c88a9db, type: 3}
+    - target: {fileID: 4595019200956213452, guid: b273a54544cea33448ccca33917b28d5, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8e9bc356810a8944680ba73f6fa5f008, type: 3}
+    - target: {fileID: 4595019200956213452, guid: b273a54544cea33448ccca33917b28d5, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8e9bc356810a8944680ba73f6fa5f008, type: 3}
+    - target: {fileID: 4595019200956213452, guid: b273a54544cea33448ccca33917b28d5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8111887847506291027}
     - target: {fileID: 4595019200956213452, guid: b273a54544cea33448ccca33917b28d5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MainMenu
+      value: Resume
       objectReference: {fileID: 0}
     - target: {fileID: 4595019200956213452, guid: b273a54544cea33448ccca33917b28d5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -405,7 +456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5358149041526856168, guid: b273a54544cea33448ccca33917b28d5, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 250
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 5358149041526856168, guid: b273a54544cea33448ccca33917b28d5, type: 3}
       propertyPath: m_SizeDelta.y
@@ -465,11 +516,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8008570275661751132, guid: b273a54544cea33448ccca33917b28d5, type: 3}
       propertyPath: m_fontSize
-      value: 46.5
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008570275661751132, guid: b273a54544cea33448ccca33917b28d5, type: 3}
+      propertyPath: m_margin.w
+      value: 13.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008570275661751132, guid: b273a54544cea33448ccca33917b28d5, type: 3}
+      propertyPath: m_margin.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008570275661751132, guid: b273a54544cea33448ccca33917b28d5, type: 3}
+      propertyPath: m_margin.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008570275661751132, guid: b273a54544cea33448ccca33917b28d5, type: 3}
+      propertyPath: m_margin.z
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8486174022603829485, guid: b273a54544cea33448ccca33917b28d5, type: 3}
       propertyPath: m_Name
       value: BaseUIButton (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8994158508484210533, guid: b273a54544cea33448ccca33917b28d5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1bfc90d52ef5de84ca37290494218a44, type: 3}
+    - target: {fileID: 8994158508484210533, guid: b273a54544cea33448ccca33917b28d5, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
