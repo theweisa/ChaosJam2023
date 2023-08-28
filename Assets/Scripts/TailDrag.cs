@@ -39,7 +39,9 @@ public class TailDrag : MonoBehaviour
     private void OnMouseDrag()
     {
         if (!PlayerManager.Instance.isHeld) return;
-        transform.position = Global.GetMouseWorldPosition() + mousePositionOffset;
+        Cursor.lockState = CursorLockMode.Confined;
+        Vector3 pos = Global.GetMouseWorldPosition() + mousePositionOffset;
+        transform.position = pos;
     }
 
     private void OnMouseUp()

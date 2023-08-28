@@ -32,7 +32,6 @@ public class GameManager : UnitySingleton<GameManager>
     {
         base.Awake();
         Time.timeScale = 1;
-        Cursor.lockState = CursorLockMode.Confined;
     }
 
     private void Start()
