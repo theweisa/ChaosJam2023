@@ -12,7 +12,6 @@ public class MainMenuManager : UnitySingleton<MainMenuManager>
     public CanvasGroup anyKeyIndicator;
     public CanvasGroup buttonsToLoad;
 
-
     // Start is called before the first frame update
     void Start()
     {
