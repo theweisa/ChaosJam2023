@@ -434,8 +434,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonClickRef:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1817792626
+      Data2: 1179074087
+      Data3: -139371093
+      Data4: 1489845880
+    Path: event:/Click

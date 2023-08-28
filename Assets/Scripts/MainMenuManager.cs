@@ -15,6 +15,7 @@ public class MainMenuManager : UnitySingleton<MainMenuManager>
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 0;
         LeanTween.alphaCanvas(anyKeyIndicator, 0, 2).setLoopPingPong();
     }
 
