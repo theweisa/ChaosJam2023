@@ -8,6 +8,7 @@ public class FMODEventRef : MonoBehaviour
     [field: Header("Impacts")]
     [field: SerializeField] public EventReference RatImpact {get; private set;}
     [field: SerializeField] public EventReference BoxDestruction {get; private set;}
+    [field: SerializeField] public EventReference SewerGrate {get; private set;}    
     
     [field: Header("Whooshes")]
     [field: SerializeField] public EventReference RatFlying {get; private set;}
@@ -23,6 +24,7 @@ public class FMODEventRef : MonoBehaviour
     [field: SerializeField] public EventReference ClawMachine {get; private set;}
     [field: SerializeField] public EventReference ClawMachineLeave {get; private set;}
     [field: SerializeField] public EventReference ClawMachineEnter {get; private set;}
+    [field: SerializeField] public EventReference UIClick {get; private set;}
 
     public static FMODEventRef instance {get; private set;}
 

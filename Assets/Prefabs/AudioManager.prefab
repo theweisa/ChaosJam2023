@@ -71,6 +71,13 @@ MonoBehaviour:
       Data3: -489837426
       Data4: -1243336473
     Path: event:/Destruction
+  <SewerGrate>k__BackingField:
+    Guid:
+      Data1: 1365508252
+      Data2: 1180757685
+      Data3: 7655071
+      Data4: -1405472807
+    Path: event:/SewerBreak
   <RatFlying>k__BackingField:
     Guid:
       Data1: -441329897
@@ -134,3 +141,10 @@ MonoBehaviour:
       Data3: 1695602861
       Data4: -890100583
     Path: event:/ClawMachineEnter
+  <UIClick>k__BackingField:
+    Guid:
+      Data1: -1817792626
+      Data2: 1179074087
+      Data3: -139371093
+      Data4: 1489845880
+    Path: event:/Click

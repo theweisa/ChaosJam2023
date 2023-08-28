@@ -580,6 +580,26 @@ PrefabInstance:
       value: AudioManager
       objectReference: {fileID: 0}
     - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
+      propertyPath: <UIClick>k__BackingField.Path
+      value: event:/Click
+      objectReference: {fileID: 0}
+    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
+      propertyPath: <UIClick>k__BackingField.Guid.Data1
+      value: -1817792626
+      objectReference: {fileID: 0}
+    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
+      propertyPath: <UIClick>k__BackingField.Guid.Data2
+      value: 1179074087
+      objectReference: {fileID: 0}
+    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
+      propertyPath: <UIClick>k__BackingField.Guid.Data3
+      value: -139371093
+      objectReference: {fileID: 0}
+    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
+      propertyPath: <UIClick>k__BackingField.Guid.Data4
+      value: 1489845880
+      objectReference: {fileID: 0}
+    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
       propertyPath: <ClawMachineEnter>k__BackingField.Path
       value: event:/ClawMachineEnter
       objectReference: {fileID: 0}
