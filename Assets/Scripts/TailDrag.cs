@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+
 public class TailDrag : MonoBehaviour
 {
     Vector3 mousePositionOffset;
@@ -27,6 +28,7 @@ public class TailDrag : MonoBehaviour
         if (GameManager.Instance.gameState != GameManager.GameState.Throwing || PlayerManager.Instance.isHeld) return;
         Debug.Log("pickup!");
         PlayerManager.Instance.claw.GetComponent<Animator>().SetBool("holding", false);
+        FMODUnity.RuntimeManager.PlayOneShot(FMODEventRef.instance.ClawMachineLeave);  
         Global.FadeOut(PlayerManager.Instance.claw.GetComponent<SpriteRenderer>(), 0.7f);
         LeanTween.moveY(PlayerManager.Instance.claw, PlayerManager.Instance.playerStartPosition.position.y, 1.5f).setOnComplete(()=>{
             PlayerManager.Instance.claw.SetActive(false);
