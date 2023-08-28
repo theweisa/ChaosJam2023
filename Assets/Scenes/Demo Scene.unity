@@ -401,13 +401,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3610714892608720797, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.04
-      objectReference: {fileID: 0}
     - target: {fileID: 3615139022458895830, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
       propertyPath: m_Name
       value: PlayerManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4669525189758349207, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
+      propertyPath: m_Size.x
+      value: 6.40625
+      objectReference: {fileID: 0}
+    - target: {fileID: 4669525189758349207, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
+      propertyPath: m_Size.y
+      value: 30.943398
+      objectReference: {fileID: 0}
+    - target: {fileID: 4669525189758349207, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 65b5a5e4d1967dc4cbbeae1bbefe0ac3, type: 3}
+    - target: {fileID: 4669525189758349207, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7416925598180118319, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
       propertyPath: m_LocalScale.y
@@ -420,6 +432,22 @@ PrefabInstance:
     - target: {fileID: 7416925598180118319, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530970791970229806, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530970791970229806, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530970791970229806, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8875
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530970791970229806, guid: 54787764795d4304a96addcb8e5acdea, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -585,64 +613,44 @@ PrefabInstance:
       value: AudioManager
       objectReference: {fileID: 0}
     - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
-      propertyPath: <LevelMusic>k__BackingField.Path
-      value: event:/Music
+      propertyPath: <ClawMachineEnter>k__BackingField.Path
+      value: event:/ClawMachineEnter
       objectReference: {fileID: 0}
     - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
-      propertyPath: <RatRelease>k__BackingField.Path
-      value: event:/RatRelease
+      propertyPath: <ClawMachineLeave>k__BackingField.Path
+      value: event:/ClawMachineLeave
       objectReference: {fileID: 0}
     - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
-      propertyPath: <SewerAmbience>k__BackingField.Path
-      value: event:/Ambience
+      propertyPath: <ClawMachineEnter>k__BackingField.Guid.Data1
+      value: 1830091709
       objectReference: {fileID: 0}
     - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
-      propertyPath: <LevelMusic>k__BackingField.Guid.Data1
-      value: 600557571
+      propertyPath: <ClawMachineEnter>k__BackingField.Guid.Data2
+      value: 1260735625
       objectReference: {fileID: 0}
     - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
-      propertyPath: <LevelMusic>k__BackingField.Guid.Data2
-      value: 1147277247
+      propertyPath: <ClawMachineEnter>k__BackingField.Guid.Data3
+      value: 1695602861
       objectReference: {fileID: 0}
     - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
-      propertyPath: <LevelMusic>k__BackingField.Guid.Data3
-      value: 1499971511
+      propertyPath: <ClawMachineEnter>k__BackingField.Guid.Data4
+      value: -890100583
       objectReference: {fileID: 0}
     - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
-      propertyPath: <LevelMusic>k__BackingField.Guid.Data4
-      value: -1868678594
+      propertyPath: <ClawMachineLeave>k__BackingField.Guid.Data1
+      value: -1372908043
       objectReference: {fileID: 0}
     - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
-      propertyPath: <RatRelease>k__BackingField.Guid.Data1
-      value: -1199738049
+      propertyPath: <ClawMachineLeave>k__BackingField.Guid.Data2
+      value: 1128445226
       objectReference: {fileID: 0}
     - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
-      propertyPath: <RatRelease>k__BackingField.Guid.Data2
-      value: 1223984679
+      propertyPath: <ClawMachineLeave>k__BackingField.Guid.Data3
+      value: -1378479232
       objectReference: {fileID: 0}
     - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
-      propertyPath: <RatRelease>k__BackingField.Guid.Data3
-      value: -1576482156
-      objectReference: {fileID: 0}
-    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
-      propertyPath: <RatRelease>k__BackingField.Guid.Data4
-      value: -689839590
-      objectReference: {fileID: 0}
-    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
-      propertyPath: <SewerAmbience>k__BackingField.Guid.Data1
-      value: 691684989
-      objectReference: {fileID: 0}
-    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
-      propertyPath: <SewerAmbience>k__BackingField.Guid.Data2
-      value: 1179884256
-      objectReference: {fileID: 0}
-    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
-      propertyPath: <SewerAmbience>k__BackingField.Guid.Data3
-      value: 879531438
-      objectReference: {fileID: 0}
-    - target: {fileID: 580392337026320253, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
-      propertyPath: <SewerAmbience>k__BackingField.Guid.Data4
-      value: -506463855
+      propertyPath: <ClawMachineLeave>k__BackingField.Guid.Data4
+      value: 906783340
       objectReference: {fileID: 0}
     - target: {fileID: 7852695232636529617, guid: 2d4cc6156498684479e45eaf9a903cbc, type: 3}
       propertyPath: m_LocalPosition.x

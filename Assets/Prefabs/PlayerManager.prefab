@@ -28,8 +28,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.28, y: 0.56, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.71, y: 0.71, z: 0.8875}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1213557648922739243}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -74,12 +74,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d75bf96710e5439418f78a1433276a7c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 65b5a5e4d1967dc4cbbeae1bbefe0ac3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.71875, y: 8.0625}
+  m_Size: {x: 6.40625, y: 30.943398}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -165,6 +165,7 @@ MonoBehaviour:
   stopDuration: 2.3
   stopTimer: 0
   lifespan: 10
+  ratAttachCombo: 0
   playerStartPosition: {fileID: 7624865011558183808}
   playerEndPosition: {fileID: 7232190215270874966}
   dragText: {fileID: 9121308798949164774}
@@ -416,11 +417,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3383059710080620828, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.99830383
+      value: 0.9989416
       objectReference: {fileID: 0}
     - target: {fileID: 3383059710080620828, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.05821901
+      value: -0.045996472
       objectReference: {fileID: 0}
     - target: {fileID: 7306413308352298587, guid: 2f3edc6b1cb82f3468b1435f1f6c118b, type: 3}
       propertyPath: m_IsActive

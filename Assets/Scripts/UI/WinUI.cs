@@ -85,7 +85,7 @@ public class WinUI : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.5f);
         finalScoreText.gameObject.SetActive(true);
         RuntimeManager.PlayOneShot(FMODEventRef.instance.RatImpact, "Material", 0);
-        Global.PopOutText(finalScoreText, 1.3f, 0.5f, LeanTweenType.easeInQuart);
+        Global.PopOutText(finalScoreText, 1.6f, 0.3f);
         finalScoreText.text = (RatController.connectedRats.Count * score * throwBonus).ToString();
         yield return new WaitForSecondsRealtime(0.8f);
         RuntimeManager.PlayOneShot(FMODEventRef.instance.RatImpact, "Material", 0);
