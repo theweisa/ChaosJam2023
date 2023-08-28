@@ -19,6 +19,10 @@ public class FMODEventRef : MonoBehaviour
 
     [field: Header ("Other SFX")]
     [field: SerializeField] public EventReference SewerAmbience {get; private set;}
+    [field: SerializeField] public EventReference RatCollect {get; private set;}
+    [field: SerializeField] public EventReference ClawMachine {get; private set;}
+    [field: SerializeField] public EventReference ClawMachineLeave {get; private set;}
+    [field: SerializeField] public EventReference ClawMachineEnter {get; private set;}
 
     public static FMODEventRef instance {get; private set;}
 

@@ -92,8 +92,9 @@ public class RatController : MonoBehaviour
         rat.GetComponent<Collider2D>().layerOverridePriority = 1;
         rat.GetComponent<Collider2D>().excludeLayers = LayerMask.GetMask("AttachedRat");
         */
-
         connectedRats.Add(rat);
+        PlayerManager.Instance.ratAttachCombo++;
+        RuntimeManager.PlayOneShot(FMODEventRef.instance.RatCollect, "RatCollectCombo", PlayerManager.Instance.ratAttachCombo);       
         if (GameManager.Instance.musicProgression < 7) //Music progression goes from 0-10, 0-8 are the regular loop
         {
             if (GameManager.Instance.musicProgression == 0) {
@@ -123,8 +124,8 @@ public class RatController : MonoBehaviour
             SetNewMasterRat(this);
         }
         if(masterRat == this && GameManager.Instance.gameState == GameManager.GameState.Thrown){
-            RuntimeManager.StudioSystem.setParameterByName("RatFlightTime", ratFlightTime);   
-            ratFlightTime += Time.deltaTime;   
+            RuntimeManager.StudioSystem.setParameterByName("RatFlightTime", ratFlightTime);
+            ratFlightTime += Time.deltaTime;
         }
                
 

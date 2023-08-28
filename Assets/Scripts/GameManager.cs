@@ -20,6 +20,7 @@ public class GameManager : UnitySingleton<GameManager>
     public int musicProgression;
     public int throwsTaken = 0;
     public int totalDamage = 0;
+    public int ratAttachCombo;
     private EventInstance levelAmbience;
     private EventInstance levelMusic;
     /*
@@ -32,7 +33,6 @@ public class GameManager : UnitySingleton<GameManager>
     {
         base.Awake();
         Time.timeScale = 1;
-        Cursor.lockState = CursorLockMode.Confined;
     }
 
     private void Start()
@@ -118,7 +118,7 @@ public class GameManager : UnitySingleton<GameManager>
     {
         levelAmbience.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         levelAmbience.release();
-        RuntimeManager.StudioSystem.setParameterByName("RatProgression", 10);      
+        RuntimeManager.StudioSystem.setParameterByName("RatProgression", 10);  
         yield return null;
         TogglePause(false);
         CameraManager.Instance.PanToCamera(CameraManager.Instance.winCamera);

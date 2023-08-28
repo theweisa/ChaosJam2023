@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class ExitGrateController : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class ExitGrateController : MonoBehaviour
 
             if (RatController.connectedRats.Count > requiredRatPercentage * totalRats)
             {
+                RuntimeManager.PlayOneShot(FMODEventRef.instance.BoxDestruction, "Material", 11);
                 Debug.Log("sewer grate destroyed");
                 Destroy(gameObject);
                 GameManager.Instance.WinGame();

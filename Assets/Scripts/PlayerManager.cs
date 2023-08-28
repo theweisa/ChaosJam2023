@@ -17,6 +17,7 @@ public class PlayerManager : UnitySingleton<PlayerManager>
     private float lifespanTimer = 0f;
     private EventInstance ratFlying;
     private EventInstance ratSpinning;
+    public int ratAttachCombo;
     public Transform playerStartPosition, playerEndPosition;
     public TMPro.TMP_Text dragText;
     // Start is called before the first frame update
@@ -92,11 +93,12 @@ public class PlayerManager : UnitySingleton<PlayerManager>
     }
 
     public IEnumerator PickUpRat() {
-        ratSpinning = AudioManager.instance.CreateEventInstance(FMODEventRef.instance.RatSwinging);
-        ratSpinning.start();
+        ratFlying.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        ratFlying.release();
         Rigidbody2D tailRb = tail.GetComponent<Rigidbody2D>();
         Vector2 tailPos = currentRat.GetComponent<RatController>().tailSprite.transform.position;
         claw.SetActive(true);
+        RuntimeManager.PlayOneShot(FMODEventRef.instance.ClawMachineEnter);  
         Global.FadeIn(claw.GetComponent<SpriteRenderer>(), 0.3f);
         claw.GetComponent<Animator>().SetBool("holding", false);
         claw.transform.position = new Vector2(tailPos.x, tailPos.y+20f);
@@ -124,13 +126,15 @@ public class PlayerManager : UnitySingleton<PlayerManager>
         currentRat.GetComponent<RatClamp>().ignoreClamp = false;
         SetTailPosition(tailPos, false);
         Global.FadeOut(claw.GetComponent<SpriteRenderer>(), 1f);
+                RuntimeManager.PlayOneShot(FMODEventRef.instance.ClawMachineLeave);  
         LeanTween.moveY(tail, tail.transform.position.y + 10f, 1f);
         LeanTween.moveY(claw, tail.transform.position.y + 10f, 1f);
     }
 
     public IEnumerator ResetRat(bool start=false) {
-        ratFlying.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        ratFlying.release();
+        ratSpinning = AudioManager.instance.CreateEventInstance(FMODEventRef.instance.RatSwinging);
+        ratSpinning.start();
+        ratAttachCombo = 0;
         stopTimer = 0f;
         lifespanTimer = 0f;
         tail.GetComponent<LineRenderer>().enabled = true;
@@ -158,11 +162,12 @@ public class PlayerManager : UnitySingleton<PlayerManager>
         SetTailPosition(playerStartPosition.position);
         claw.SetActive(true);
         Global.FadeIn(claw.GetComponent<SpriteRenderer>(), 0.5f);
+        RuntimeManager.PlayOneShot(FMODEventRef.instance.ClawMachine);
         claw.GetComponent<Animator>().SetBool("holding", true);
         claw.transform.position = playerStartPosition.position;
         LeanTween.moveY(tail, playerEndPosition.position.y, 3f);
         LeanTween.moveY(claw, playerEndPosition.position.y, 3f);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(3f);      
         GameManager.Instance.levelWalls.SetWallEnable(TriggerEnterBox.WallType.Top, true);
         if (!start) {
             GameManager.Instance.gameState = GameManager.GameState.Throwing;
