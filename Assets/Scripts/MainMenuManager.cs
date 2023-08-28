@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMOD.Studio;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,14 +8,18 @@ public class MainMenuManager : UnitySingleton<MainMenuManager>
 {
     public bool gameEnabled = false;
     public bool isLoadingLevel = false;
+    public Transform titleText;
 
     public CanvasGroup fadeCanvas;
     public CanvasGroup anyKeyIndicator;
     public CanvasGroup buttonsToLoad;
+    EventInstance ambience;
 
     // Start is called before the first frame update
     void Start()
     {
+        ambience = AudioManager.instance.CreateEventInstance(FMODEventRef.instance.SewerAmbience);
+        ambience.start();
         Time.timeScale = 1;
         LeanTween.alphaCanvas(anyKeyIndicator, 0, 2).setLoopPingPong();
     }
@@ -35,7 +40,8 @@ public class MainMenuManager : UnitySingleton<MainMenuManager>
         yield return null;
         LeanTween.alphaCanvas(anyKeyIndicator, 0, 0.2f);
         yield return new WaitForSecondsRealtime(0.2f);
-        LeanTween.moveLocalX(buttonsToLoad.gameObject, -961, 0.5f);
+        LeanTween.moveLocalY(titleText.gameObject, 103, 2f).setEaseOutElastic();
+        LeanTween.moveLocalX(buttonsToLoad.gameObject, -961, 0.5f).setEaseOutExpo();
         LeanTween.alphaCanvas(buttonsToLoad, 1, 0.4f);
     }
 
@@ -45,6 +51,8 @@ public class MainMenuManager : UnitySingleton<MainMenuManager>
         {
             return;
         }
+        ambience.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        ambience.release();
 
         isLoadingLevel = true;
         SaveManager.Instance.levelToLoad = index;
